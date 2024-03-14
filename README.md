@@ -15,5 +15,3 @@ Primera Etapa:
 - chat(marcar "pagina en construccion")
 
   En proceso:
-  A Cargo     Actividad
-  nombre      xxxxx
