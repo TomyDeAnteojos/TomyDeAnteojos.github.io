@@ -3,18 +3,6 @@
 Pagina web: https://tomydeanteojos.github.io/usuario/index.html
 
 Primera Etapa:
-- header
-- nav
-- footer
-- index
-- perfil
-- login
-- registrar
-- gestion turnos
-- contacto
-- dashboard
-- gestion usuario
-- chat(marcar "pagina en construccion")
 
   En proceso:
 <table style="width: 100%; text-align: center;">
@@ -37,6 +25,16 @@ Primera Etapa:
       dashboard<br/>
       gestion usuario<br/>
       chat(marcar "pagina en construccion")
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="width: 100%; padding-top: 50px;">
+      -
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="width: 100%; padding-top: 50px;">
+      -
     </td>
   </tr>
   
