@@ -25,17 +25,17 @@ Primera Etapa:
   </tr>
   <tr>
     <td colspan="3" style="width: 100%; padding-top: 50px;">
-      header
-      nav
-      footer
-      index
-      perfil
-      login
-      registrar
-      gestion turnos
-      contacto
-      dashboard
-      gestion usuario
+      header<br/>
+      nav<br/>
+      footer<br/>
+      index<br/>
+      perfil<br/>
+      login<br/>
+      registrar<br/>
+      gestion turnos<br/>
+      contacto<br/>
+      dashboard<br/>
+      gestion usuario<br/>
       chat(marcar "pagina en construccion")
     </td>
   </tr>
