@@ -26,17 +26,15 @@ Primera Etapa:
       gestion usuario<br/>
       chat(marcar "pagina en construccion")
     </td>
-  </tr>
-  <tr>
+
+    <td colspan="3" style="width: 100%; padding-top: 50px;">
+      -
+    </td>
+
     <td colspan="3" style="width: 100%; padding-top: 50px;">
       -
     </td>
   </tr>
-  <tr>
-    <td colspan="3" style="width: 100%; padding-top: 50px;">
-      -
-    </td>
-  </tr>
-  
+
   
 </table>
