@@ -4,7 +4,6 @@ Pagina web: https://tomydeanteojos.github.io/usuario/index.html
 
 Primera Etapa:
 
-  En proceso:
 <table>
   <tr>
     <th>Lista de tareas</th>
@@ -27,7 +26,7 @@ Primera Etapa:
       chat(marcar "pagina en construccion")
     </td>
     <td>
-      - 
+      Login - Tomi 
     </td>
     <td>
       -
