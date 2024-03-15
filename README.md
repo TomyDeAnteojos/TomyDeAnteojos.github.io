@@ -13,18 +13,7 @@ Primera Etapa:
   </tr>
   <tr>
     <td colspan="1" style="width: 100%; padding-top: 50px;">
-      header<br/>
-      nav<br/>
-      footer<br/>
-      index<br/>
-      perfil<br/>
-      login<br/>
-      registrar<br/>
-      gestion turnos<br/>
-      contacto<br/>
-      dashboard<br/>
-      gestion usuario<br/>
-      chat(marcar "pagina en construccion")
+      
     </td>
 
     <td colspan="1" style="width: 100%; padding-top: 50px;">
@@ -38,4 +27,29 @@ Primera Etapa:
   
 </table>
 
+<table>
+  <tr>
+    <th>Lista de tareas</th>
+    <th>en proceso</th>
+    <th>Hecho</th>
+  </tr>
+  <tr>
+    <td>
+      header<br/>
+      nav<br/>
+      footer<br/>
+      index<br/>
+      perfil<br/>
+      login<br/>
+      registrar<br/>
+      gestion turnos<br/>
+      contacto<br/>
+      dashboard<br/>
+      gestion usuario<br/>
+      chat(marcar "pagina en construccion")
+    </td>
+    <td>Fila 1 Columna 2</td>
+    <td>Fila 1 Columna 3</td>
+  </tr>
+</table>
 
