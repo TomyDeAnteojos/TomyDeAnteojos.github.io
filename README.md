@@ -27,11 +27,11 @@ Primera Etapa:
       chat(marcar "pagina en construccion")
     </td>
 
-    <td colspan="1" style="width: 100%; padding-top: 50px;">
+    <td colspan="1" style="width: 33%; padding-top: 50px;">
       NADA
     </td>
 
-    <td colspan="1" style="width: 100%; padding-top: 50px;">
+    <td colspan="1" style="width: 33%; padding-top: 50px;">
       NADA
     </td>
   </tr>
