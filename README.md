@@ -28,13 +28,12 @@ Primera Etapa:
     </td>
 
     <td colspan="3" style="width: 100%; padding-top: 50px;">
-      -
+      NADA
     </td>
 
     <td colspan="3" style="width: 100%; padding-top: 50px;">
-      -
+      NADA
     </td>
   </tr>
-
   
 </table>
