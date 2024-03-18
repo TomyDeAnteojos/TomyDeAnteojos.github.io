@@ -12,7 +12,7 @@
 }
 
 #logeo img  {
-    height: auto;
+    height: 100vh;
     width: 100%;
 }
 
@@ -47,15 +47,34 @@ input[type=submit][name=btn-enviar]  {
     padding-right: 30px;
 }
 
-input[type=submit][name=btn-registrar]  {
-    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-    padding: 10px; /*espacio alrededor texto*/
-    background-color: #2e518b; /*color botón*/
-    color: #ffffff; /*color texto*/
-    text-decoration: none; /*decoración texto*/
-    text-transform: capitalize; /*capitalización texto*/
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-    border-radius: 50px; /*bordes redondos*/
+.btn-registrar {
+    padding: 10px;
+    text-decoration: none; 
+    text-transform: capitalize; 
+    font-family: 'Helvetica', sans-serif; 
     padding-left: 30px;
     padding-right: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, rgba(1,47,105,1) 0%, rgba(99,175,232,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .pgn-login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logeo {
+        width: 100%;
+    }
+
+    .form-login {
+        width: 70%;
+        padding: 10px 0;
+        margin: 0px;
+    }
 }
