@@ -1,0 +1,61 @@
+.pgn-login  {
+    display: flex;
+    flex-direction: row;
+    background: rgb(1,47,105);
+    background: linear-gradient(90deg, rgba(1,47,105,1) 0%, rgba(99,175,232,1) 70%, rgba(0,212,255,1) 100%);
+}
+
+#logeo  {
+    text-align: center;
+    width: 65%;
+    float: left;
+}
+
+#logeo img  {
+    height: auto;
+    width: 100%;
+}
+
+.form-login  {
+    padding: 20px;
+    border: 2px solid black;
+    align-self: center;
+    margin: auto;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#olvido-pass  {
+    text-align: right;
+}
+
+.icon-login  {
+    text-align: center;
+}
+
+input[type=submit][name=btn-enviar]  {
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: capitalize; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+input[type=submit][name=btn-registrar]  {
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: capitalize; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    padding-left: 30px;
+    padding-right: 30px;
+}
