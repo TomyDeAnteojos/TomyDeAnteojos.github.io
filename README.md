@@ -1,6 +1,6 @@
 # ClinicAI
 
-Pagina web: https://tomydeanteojos.github.io/usuario/index.html
+Pagina web: https://tomydeanteojos.github.io/index.html
 
 Primera Etapa:
 
