@@ -64,6 +64,7 @@ input[type=submit][name=btn-enviar]  {
 
 p {
     color:green;
+    width: auto;
 }
 
 @media screen and (max-width: 768px) {
