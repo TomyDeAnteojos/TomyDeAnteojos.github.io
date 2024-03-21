@@ -62,10 +62,7 @@ input[type=submit][name=btn-enviar]  {
     color: transparent;
 }
 
-p {
-    color:green;
-    width: auto;
-}
+
 
 @media screen and (max-width: 768px) {
     .pgn-login {
