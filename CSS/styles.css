@@ -1,82 +1,58 @@
-.pgn-login  {
-    display: flex;
-    flex-direction: row;
-    background: rgb(1,47,105);
-    background: linear-gradient(90deg, rgba(1,47,105,1) 0%, rgba(99,175,232,1) 70%, rgba(0,212,255,1) 100%);
-}
-
-#logeo  {
-    text-align: center;
-    width: 65%;
-    float: left;
-}
-
-#logeo img  {
-    height: 100vh;
-    width: 100%;
-}
-
-.form-login  {
-    padding: 20px;
-    border: 2px solid black;
-    align-self: center;
-    margin: auto;
-    background-color: white;
-    border-radius: 30px;
-    text-align: center;
-}
-
-#olvido-pass  {
-    text-align: right;
-}
-
-.icon-login  {
-    text-align: center;
-}
-
-input[type=submit][name=btn-enviar]  {
-    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-    padding: 10px; /*espacio alrededor texto*/
-    background-color: #2e518b; /*color botón*/
-    color: #ffffff; /*color texto*/
-    text-decoration: none; /*decoración texto*/
-    text-transform: capitalize; /*capitalización texto*/
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-    border-radius: 50px; /*bordes redondos*/
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.btn-registrar {
-    padding: 10px;
-    text-decoration: none; 
-    text-transform: capitalize; 
-    font-family: 'Helvetica', sans-serif; 
-    padding-left: 30px;
-    padding-right: 30px;
-    font-weight: bold;
-    background-image: linear-gradient(90deg, rgba(1,47,105,1) 0%, rgba(99,175,232,1) 35%, rgba(0,212,255,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .pgn-login {
-        display: flex;
-        flex-direction: column;
+@media (min-width: 1024px) {
+    
+    .container-login {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(3,fr);
+        display: grid;
     }
 
-    #logeo {
-        width: 100%;
+    .void {
+        padding: 50px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .lgn-element {
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .form-login {
-        width: 70%;
-        padding: 10px 0;
-        margin: 0px;
+        display: grid;
+        grid-column: 2;
+        grid-row: 2 /span 3;
+        grid-template-columns: repeat(2,fr);
+        grid-template-rows: repeat(5,fr);
+    }
+
+    .form-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+
+        justify-self: center;
+        align-self: center;
+
+        border: black 3px solid;
+        margin: 0 2fr;
+        padding: 30px;
+    }
+
+    .form-box input[type="email"],input[type="password"], input[type="submit"] {
+        grid-column: 1 /span 2;
+    }
+
+    .form-box .icons {
+        justify-self: center;
+        grid-column: 1 /span 2;
+    }
+    
+}
+@media (max-width: 1023px) {
+    /* Agrega aquí los estilos para tabletas */
+    body {
+        background-color: red;
     }
 }

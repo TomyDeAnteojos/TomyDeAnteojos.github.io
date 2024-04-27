@@ -5,49 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Clinica, Hospital, Inteligencia Artificial, Turnos, Biomedicina, Medicina, Salud, Usuario">
     <meta name="author" content="Grupo 1">
-
     <link href="../CSS/styles.css" rel="stylesheet">
-    
     <title>ClinicAI - Login</title>
 </head>
-
-<body class="pgn-login">
-    <div id="logeo">
-        <img src="../source/img/entrada.jpg" alt="entrada de hospital" width="900px">
-    </div>
-    <form method="post" action="#" class="form-login" autocomplete="on">
-        <h1 style="text-align: center;">Bienvenido!</h1>
-        
-        <label for="txt-mail" name="lbl-mail">Ingrese su nombre</label>
-        <input type="email" name="txt-mail" id="login" placeholder="example@gmail.com" >
-
-        <br/><br/>
-
-        <label for="txt-pass" name="lbl-pass">Ingrese su contraseña</label>
-        <input type="password" name="txt-pass" id="login" placeholder="password">
-
-        <br/><br/>
-        
-        <a href="#" id="olvido-pass"> olvido su contraseña?</a>
-        
-        <br/><br/>
-        
-        <input type="submit" value="Login" name="btn-enviar"/>
-        <a href="registrar.html" class="btn-registrar">Registrar</a>
-        
-        <br/><br/>
-        
-        <input type="checkbox" name="chk-recordar" id="login"/>
-        <label for="chk-recordar">recordar usuario</label>
-
-        <br/><br/>
-
-        <div class="icon-login">
-            Iniciar sesion con google <br/><br/>
-            <img src="../source/img/google.png" alt="iniciar sesion con google" width="30px"/>
+<body>
+    <div class="container-login">
+        <div class="void"></div>
+        <div class="lgn-element">
+            <img src="../source/img/entrada.jpg" alt="entrada de hospital" width="100%">
         </div>
-        
-    </form>
-    
+        <div class="form-login">
+        <form method="post" action="#" class="form-box" autocomplete="on">
+                <input type="email" id="mail" name="mail" placeholder="Email" required>
+                <input type="password" id="contrasenia" name="contraseña" placeholder="Contraseña" required>
+                <div>
+                    <input type="checkbox" id="recordar" name="recordar" >Recordar usuario
+                </div>
+                <button type="button">Mostrar</button>
+
+                <input type="submit" value="Iniciar Sesión">
+                <a href="#">Olvidé mi contraseña</a>
+                <div class="icons">
+                    <button type="button">Entrar con Google</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
+
+
+<!---->
