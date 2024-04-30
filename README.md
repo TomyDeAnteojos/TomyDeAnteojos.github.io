@@ -30,17 +30,17 @@ Primera Etapa:
       chat(marcar "pagina en construccion")
     </td>
     <td>
-      Login - Tomi 
-      header - Cande
-      footer - Cande
-      Nav - Valen
-      Contactos - Cande
-      Medicos - Valen
-      Especialidad - Nico
-      Sanatorios - Valen
-      Obra Sociales - Valen
-      gestion turnos - Nico
-      registrar - Tomi
+      Login - Tomi <br/>
+      header - Cande<br/>
+      footer - Cande<br/>
+      Nav - Valen<br/>
+      Contactos - Cande<br/>
+      Medicos - Valen<br/>
+      Especialidad - Nico<br/>
+      Sanatorios - Valen<br/>
+      Obra Sociales - Valen<br/>
+      gestion turnos - Nico<br/>
+      registrar - Tomi<br/>
       perfil - Nico
     </td>
     <td>
