@@ -23,10 +23,25 @@ Primera Etapa:
       contacto<br/>
       dashboard<br/>
       gestion usuario<br/>
+      Medicos<br/>
+      Especialidad<br/>
+      Sanatorios<br/>
+      Obra Sociales
       chat(marcar "pagina en construccion")
     </td>
     <td>
       Login - Tomi 
+      header - Cande
+      footer - Cande
+      Nav - Valen
+      Contactos - Cande
+      Medicos - Valen
+      Especialidad - Nico
+      Sanatorios - Valen
+      Obra Sociales - Valen
+      gestion turnos - Nico
+      registrar - Tomi
+      perfil - Nico
     </td>
     <td>
       -
