@@ -1,58 +1,27 @@
-@media (min-width: 1024px) {
-    
-    .container-login {
-        grid-template-columns: 40% 60%;
-        grid-template-rows: repeat(3,fr);
-        display: grid;
-    }
-
-    .void {
-        padding: 50px;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .lgn-element {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .form-login {
-        display: grid;
-        grid-column: 2;
-        grid-row: 2 /span 3;
-        grid-template-columns: repeat(2,fr);
-        grid-template-rows: repeat(5,fr);
-    }
-
-    .form-box {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-
-        justify-self: center;
-        align-self: center;
-
-        border: black 3px solid;
-        margin: 0 2fr;
-        padding: 30px;
-    }
-
-    .form-box input[type="email"],input[type="password"], input[type="submit"] {
-        grid-column: 1 /span 2;
-    }
-
-    .form-box .icons {
-        justify-self: center;
-        grid-column: 1 /span 2;
-    }
-    
+@media screen and (min-width: 1024px) {
+  /* computadoras */
+  .login {
+    background-image: url("../source/img/entrada.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .login .container {
+    background-color: red;
+    border: black 3px solid;
+    padding: 100px;
+  }
+  .login .container input {
+    margin-bottom: 10px;
+    padding: 10%;
+  }
 }
-@media (max-width: 1023px) {
-    /* Agrega aquí los estilos para tabletas */
-    body {
-        background-color: red;
-    }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* tablets */
 }
+@media screen and (max-width: 767px) {
+  /* celulares */
+}/*# sourceMappingURL=styles.css.map */

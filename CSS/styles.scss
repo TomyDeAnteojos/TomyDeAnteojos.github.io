@@ -1,0 +1,32 @@
+@media screen and (min-width: 1024px) {
+    /* computadoras */
+    
+    .login {
+        background-image: url('../source/img/entrada.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .container {
+            background-color: red;
+            border: black 3px solid;
+            padding: 100px;
+            
+            input {
+                margin-bottom: 10px;
+                padding: 10%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* tablets */
+    
+}
+
+@media screen and (max-width: 767px) {
+    /* celulares */
+  }
