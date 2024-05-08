@@ -8,12 +8,91 @@
 
     <link href="../CSS/styles.css" rel="stylesheet">
     
+
+    <script src="../JS/scripts.js" defer></script>
+    
     <title>ClinicAI - Gestion de Turnos</title>
 </head>
 
-<body>
-    
+<body class="turnos">
 
-    
+    <h1 class="titulo">Gestion de turnos</h1>
+
+    <h3 class="subtitulo">Complete el siguiente formulario para solicitar un turno:</h3>
+
+    <div>
+        <form action="link" method="post" target="_blank">
+        <fieldset>
+            <label for="ape">Indique su/s apellido/s:</label>
+            <input type="text" name="apellido" id="ape" placeholder="Apellido" required>
+            <br><br>
+
+            <label for="nom">Indique su/s nombre/s:</label>
+            <input type="text" name="nombre" id="nom" placeholder="Nombre" required>
+            <br><br>
+
+            <label for="ed">Indique su edad:</label>
+            <input type="number" name="edad" id="ed" placeholder="Edad" required>
+            <br><br>
+
+            <label for="em">Indique su e-mail:</label>
+            <input type="email" name="E-MAIL" id="em" placeholder="ejemplo@hotmail.com" required>
+            <br><br>
+
+            <label for="pe">Indique su peso (kg):</label>
+            <input type="number" name="peso" id="pe" placeholder="Peso" required>
+            <br><br>
+
+            <label for="cel">Indique su telefono o celular:</label>
+            <input type="number" name="celular" id="cel" placeholder="Telefono o celular" required>
+            <br><br>
+
+            <label for="doc">Tipo de documento:</label>
+            <select name="tipodedocumento" id="doc">
+                <option value="0"></option>
+                <option value="1">DNI</option>
+                <option value="2">PAS</option>
+                <option value="3">LC</option>
+                <option value="4">LE</option>
+            </select>
+            <br><br>
+
+            <label for="num">Indique su número:</label>
+            <input type="number" name="numero" id="num" required>
+            <br><br>
+
+            <label for="obs">Obra social:</label>
+            <input type="text" name="obrasocial" id="obs">
+            <br><br>
+
+            <label for="tur">Fecha para el turno:</label>
+            <input type="date" name="turno" id="tur">
+            <br><br>
+
+            <label for="med">Especialista Médico:</label>
+            <select name="especialistamedico" id="med" required>
+                <option value="0"></option>
+                <option value="1">Cardiología</option>
+                <option value="2">Kinesiología</option>
+                <option value="3">Guardia</option>
+                <option value="4">Laboratorio</option>
+                <option value="5">Cirugía</option>
+            </select>
+            <br><br>
+
+            <label for="pdf">Adjunte Pedido Médico escaneado si lo posee:</label>
+            <br>
+            <input type="file" name="pedidomedico" id="pdf">
+            <br><br>
+
+            <label for="desc">Descripcion del estudio:</label>
+            <br>
+            <textarea name="descripcionestudio" id="desc" cols="50" rows="10"></textarea>
+
+            <br><br>
+            <input type="submit" value="Enviar formulario">
+        </fieldset>
+        </form>
+    </div>
 </body>
 </html>
