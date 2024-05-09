@@ -30,22 +30,22 @@ Primera Etapa:
       chat(marcar "pagina en construccion")
     </td>
     <td>
-      Login - Tomi <br/>
       header - Cande<br/>
       footer - Cande<br/>
-      Nav - Valen<br/>
       Contactos - Cande<br/>
+      Nav - Valen<br/>
       Medicos - Valen<br/>
-      Especialidad - Nico<br/>
       Sanatorios - Valen<br/>
       Obra Sociales - Valen<br/>
       gestion turnos - Nico<br/>
-      registrar - Tomi<br/>
-      perfil - Nico
+      Especialidad - Nico<br/>
+      perfil - Nico<br/>
+      registrar - Tomi
     </td>
     <td>
-      -
+      Login - Tomi
     </td>
   </tr>
+    
 </table>
 
