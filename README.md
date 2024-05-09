@@ -43,6 +43,9 @@ Primera Etapa:
       registrar - Tomi<br/>
       perfil - Nico
     </td>
+  </tr>
+  </tr>
+  <tr>
     <td>
       Login - Tomi <br/>
     </td>
