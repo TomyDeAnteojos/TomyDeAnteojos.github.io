@@ -15,7 +15,7 @@
 
 <body class="page-register">
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">Registrar</div>
         <div class="content">
           <form action="#">
             <div class="user-details">
@@ -33,7 +33,7 @@
               </div>
               <div class="input-box">
                 <span class="details">Numero de telefono</span>
-                <input type="text" placeholder="Ingresa tu telefono" required>
+                <input type="tel" placeholder="Ingresa tu telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
               </div>
               <div class="input-box">
                 <span class="details">Contraseña</span>
@@ -41,7 +41,7 @@
               </div>
               <div class="input-box">
                 <span class="details">Confirmar Contraseña</span>
-                <input type="text" placeholder="Repite la contraseña" required>
+                <input type="password" placeholder="Repite la contraseña" required>
               </div>
             </div>
             <div class="gender-details">
@@ -58,14 +58,10 @@
                 <span class="dot two"></span>
                 <span class="gender">Mujer</span>
               </label>
-              <label for="dot-3">
-                <span class="dot three"></span>
-                <span class="gender">Prefiero no decirlo</span>
-                </label>
               </div>
             </div>
             <div class="button">
-              <input type="submit" value="Register">
+              <input type="submit" value="Registrar">
             </div>
           </form>
         </div>
