@@ -6,26 +6,52 @@
     <meta name="keywords" content="Clinica, Hospital, Inteligencia Artificial, Turnos, Biomedicina, Medicina, Salud, Usuario">
     <meta name="author" content="Grupo 1">
     <link href="../CSS/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dt5n6EDM+xtZ7w7Elx8YZ43Yh9oN8XcHE+8I5AxFOz5Fbkdtz9t4T+2rAAmckNfSDyNz3vT8NhFHAe+1/klctQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-    <script src="../JS/scripts.js" defer></script>
     <title>ClinicAI - Login</title>
 </head>
-<body class="login">
-    <form action="/login" method="post" class="container">
-        <div class="title">
-            Login
-        </div>
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="password">Contraseña:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Iniciar sesión">
-        <div class="">
+<body class="page-login">
 
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Email">
+                    </div>
+
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password">
+                    </div>
+
+                    <button class="button login__submit">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="social-login">
+                    <div class="social-icons">
+                        <a href="https://www.google.com/" class="social-login__icon fab fa-google"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
         </div>
-    </form>
+    </div>
+
 </body>
 </html>
 
