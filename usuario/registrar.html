@@ -5,15 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Clinica, Hospital, Inteligencia Artificial, Turnos, Biomedicina, Medicina, Salud">
     <meta name="author" content="Grupo 1">
-
-    <link href="../CSS/styles.css" rel="stylesheet">
-    
     <title>ClinicAI - Registrar</title>
+    <link href="../CSS/styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    
-
-    
+<body class="page-register">
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Nombre</span>
+                <input type="text" placeholder="Ingresa tu nombre" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Apellido</span>
+                <input type="text" placeholder="Ingresa tu apellido" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Ingresa tu Email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Numero de telefono</span>
+                <input type="text" placeholder="Ingresa tu telefono" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input type="password" placeholder="Ingresa tu contraseña" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirmar Contraseña</span>
+                <input type="text" placeholder="Repite la contraseña" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1">
+              <input type="radio" name="gender" id="dot-2">
+              <input type="radio" name="gender" id="dot-3">
+              <span class="gender-title">Genero</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Hombre</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Mujer</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefiero no decirlo</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
 </body>
 </html>
