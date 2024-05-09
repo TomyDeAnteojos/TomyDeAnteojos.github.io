@@ -183,13 +183,17 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* tablets */
     .page-login {
-        display: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 767px) {
     /* celulares */
     .page-login {
-        display: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
   }
