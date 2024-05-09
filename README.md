@@ -30,7 +30,6 @@ Primera Etapa:
       chat(marcar "pagina en construccion")
     </td>
     <td>
-      
       header - Cande<br/>
       footer - Cande<br/>
       Nav - Valen<br/>
@@ -44,7 +43,7 @@ Primera Etapa:
       perfil - Nico
     </td>
     <td>
-      Login - Tomi <br/>
+      Login - Tomi
     </td>
   </tr>
     
