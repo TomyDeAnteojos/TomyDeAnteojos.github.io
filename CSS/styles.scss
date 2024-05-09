@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 .page-login {
     background-image: url('../source/img/entrada.jpg');
     background-size: cover;
@@ -199,15 +200,7 @@
         min-width: 80%;
     }
   }
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-  }
+ 
   .page-register {
     height: 100vh;
     display: flex;
@@ -216,6 +209,13 @@
     padding: 10px;
     background: url("../source/img/entrada.jpg");
   
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+      }
+
     .container {
     max-width: 700px;
     width: 100%;

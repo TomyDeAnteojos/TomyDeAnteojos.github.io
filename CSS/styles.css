@@ -176,13 +176,6 @@
     min-width: 80%;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 .page-register {
   height: 100vh;
   display: flex;
@@ -190,6 +183,12 @@
   align-items: center;
   padding: 10px;
   background: url("../source/img/entrada.jpg");
+}
+.page-register * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 .page-register .container {
   max-width: 700px;
