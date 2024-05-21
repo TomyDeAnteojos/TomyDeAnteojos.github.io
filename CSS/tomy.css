@@ -73,7 +73,7 @@
   right: 50px;
   border-radius: 60px;
 }
-.page-login .login {
+.page-login #login {
   width: 320px;
   padding: 30px;
   padding-top: 156px;
@@ -161,7 +161,8 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: url("../source/img/entrada.jpg");
+  background: url("/source/img/entrada.jpg");
+  background-size: cover;
 }
 .page-register * {
   margin: 0;
@@ -169,13 +170,25 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.page-register .container {
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+@media screen and (min-width: 768px) {
+  .page-register .container {
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: 20%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-register .container {
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: 0px;
+  }
 }
 .page-register .container .title {
   font-size: 25px;
@@ -338,4 +351,166 @@
     justify-content: center;
     min-width: 80%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+body .page-index {
+  background-image: url("/source/img/home.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 100px auto 100px auto 100px auto 100px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  box-sizing: border-box;
+}
+body .page-index .principal {
+  grid-area: 2/2/3/7;
+}
+body .page-index .medicos {
+  grid-area: 4/2/5/7;
+}
+body .page-index .contact {
+  grid-area: 6/2/7/7;
+}
+body .page-index .principal {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+body .page-index .principal .text {
+  grid-area: 1/1/3/3;
+}
+body .page-index .principal .img {
+  grid-area: 1/4/3/6;
+}
+body .page-index .principal .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: rgb(104, 4, 89) solid 3px;
+  border-radius: 15px;
+  background-color: rgb(191, 12, 194);
+  padding: 5px;
+}
+body .page-index .principal .text h1 span {
+  display: block;
+  color: white;
+  font: bold 60px arial;
+  text-transform: uppercase;
+  text-shadow: 0 12px 0 #41330a;
+}
+body .page-index .principal .void1 {
+  grid-area: 1;
+}
+body .page-index .principal .img_log {
+  grid-area: 1/4/3/6;
+}
+body .page-index .principal .img_log img {
+  width: 100%;
+  height: 100%;
+}
+body .page-index .medicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+body .page-index .medicos .medico {
+  grid-area: 1/1/2/2;
+}
+body .page-index .medicos .sanatorio {
+  grid-area: 1/2/2/3;
+}
+body .page-index .medicos .obra-social {
+  grid-area: 1/3/2/4;
+}
+body .page-index .medicos .card {
+  background-image: radial-gradient(circle at 68.3% -18.3%, #83b2c4 0, #81aeba 7.14%, #80a8b0 14.29%, #80a1a5 21.43%, #80999a 28.57%, #7f908f 35.71%, #7e8785 42.86%, #7c7c7c 50%, #797274 57.14%, #75686e 64.29%, #71606a 71.43%, #6b5968 78.57%, #665366 85.71%, #5f4e66 92.86%, #584b66 100%);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+body .page-index .medicos .card .icon {
+  grid-area: 1/1/3/3;
+}
+body .page-index .medicos .card .cant {
+  grid-area: 3/1/4/2;
+}
+body .page-index .medicos .card .show {
+  grid-area: 3/2/4/3;
+}
+body .page-index .medicos .card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .page-index .medicos .card .icon img {
+  width: 100px;
+  height: 100px;
+}
+body .page-index .medicos .card .cant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-image: radial-gradient(circle at 68.3% -18.3%, #ff1ed6 0, #ff00e1 12.5%, #ea00ec 25%, #c500f6 37.5%, #9308ff 50%, #3f21ff 62.5%, #0031ff 75%, #003cff 87.5%, #0044ff 100%);
+  border-radius: 15px;
+  height: 50%;
+}
+body .page-index .medicos .card .show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-image: radial-gradient(circle at 68.3% -18.3%, #fff267 0, #fff85a 5.56%, #fffd50 11.11%, #ffff48 16.67%, #ffff43 22.22%, #e6ff43 27.78%, #c5ff48 33.33%, #a0ff50 38.89%, #71ff5b 44.44%, #08ff68 50%, #00fa78 55.56%, #00f68a 61.11%, #00f29f 66.67%, #00eeb5 72.22%, #00eacd 77.78%, #00e6e6 83.33%, #00e3ff 88.89%, #00e0ff 94.44%, #00deff 100%);
+  border-radius: 15px;
+  height: 50%;
+}
+body .page-index .contact {
+  background-color: green;
+}
+body .page-index .contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+body .page-index .contact .contact h2 {
+  margin-top: 0;
+}
+body .page-index .contact .form-group {
+  margin-bottom: 15px;
+}
+body .page-index .contact .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+body .page-index .contact .form-group input,
+body .page-index .contact .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body .page-index .contact button[type=submit] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body .page-index .contact button[type=submit]:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=tomy.css.map */
