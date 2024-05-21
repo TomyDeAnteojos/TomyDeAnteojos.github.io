@@ -1,0 +1,346 @@
+body{
+    background-color:white;
+}
+
+.cabezal {
+   display: grid;
+   grid-template-columns: 2fr 1fr ;
+   gap: 10px;
+   width: 100%;
+   background-image: url(./img/header1.jpg);
+  
+}
+.cabezal > div{
+    border: 10px;
+    position: relative;
+    padding-left: 20px
+
+}
+
+.logo > img{
+    left: auto;
+    border: 10px rgba(100, 214, 243, 0.425) outset;
+    padding:2px;
+    border-radius: 1% 20% 10%;
+  }
+  .buscador{
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+ 
+  .escritura{
+    color: white;
+    background-color: rgba(201, 45, 240, 0.411);
+    border: 70px rgba(16, 105, 221, 0.397);
+    padding: 10px;
+    border-radius: 10% 20% 10%; 
+  }
+  .boton{
+    padding: 5px 20px;
+    border-radius: 40px;
+    border: 0;
+    background-color: rgb(0, 247, 255);
+    box-shadow: #f3f1f1 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+  
+  }
+  .boton:hover{
+    letter-spacing: 3px;
+    background-color: rgba(183, 53, 235, 0.767);
+    color: white;
+    box-shadow: rgba(183, 53, 235, 0.767);
+  }
+  .boton:active{
+    letter-spacing: 3px;
+    background-color: rgba(183, 53, 235, 0.767);
+    color: white;
+    box-shadow: rgba(183, 53, 235, 0.767);
+    transform: rotate(30deg);
+    transform-origin: 10% 30%;
+    transition: 100ms;
+  }
+ 
+  
+
+  .contenedor {
+    margin: 30px 30px 30px 30px;
+    padding: 10px 10px 10px 10px;
+    background-image: url(./img/fondo\ contacto.jpg);
+  }
+
+
+  .grid-conteiner{
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    gap: 10px;
+    left: auto;
+    background-color: rgba(30, 201, 221, 0.5);
+    border: 10px rgba(152, 183, 190, 0.425) outset;
+    padding:2px;
+    border-radius: 1% 20% 10%;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+  }
+  .bot{
+    padding: 5px 20px;
+    border: 2px;
+    background-color: rgb(0, 247, 255);
+    box-shadow: #9f02fa 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .7s ease;
+  }
+
+  .bot:hover{
+    letter-spacing: 5px;
+    background-color: rgba(52, 138, 252, 0.767);
+    color: white;
+    box-shadow: rgba(52, 138, 252, 0.767);
+  }
+
+  .bot:active{
+    letter-spacing: 5px;
+    background-color: rgba(52, 138, 252, 0.767);
+    color:white;
+    box-shadow: rgba(52, 138, 252, 0.767);
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+ 
+
+
+  .grid-conteiner > div {
+   row-gap: 10px;
+   padding-bottom: 20px;
+    text-align: center;
+
+ 
+  }
+  .grid-conteiner > div > h1 {
+    margin-top: 20%;
+   
+
+  
+  }
+
+
+.grid-contenedor{
+    margin: 10px 10px 10px 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   border: 10px rgba(152, 183, 190, 0.425) groove; 
+   background-color: rgba(30, 201, 221, 0.5);
+   text-align: center;
+   font-family: sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.grid-contenedor > div {
+  text-align: center;
+  margin: 10px;
+}
+
+.cajon {
+background-image: url(./img/footer1.jpg);
+}
+  
+ .cajon > h1 {
+  padding-top: 10px;
+  color: rgb(50, 131, 202);
+  text-align: center;
+ }
+
+
+
+.conteiner{
+   margin: 20px;
+   display: grid;
+   row-gap: 10px;
+   grid-template-columns: 1fr 1fr 1fr;
+   border: 5px solid rgba(30, 201, 221, 0.3) ;
+   border-radius: 11px ;
+}
+.conteiner > div {
+   background-color: rgba(30, 201, 221, 0.3);
+   text-align: center;
+   font-size: 18px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-style: italic;
+ 
+}
+
+ .conteiner > div > img {
+  margin-top: 7%;
+  position: static;
+  width: 130px;
+  height: auto;
+ }
+
+ .conteiner > div > ul{
+    list-style-type: none;
+    padding: 30px;
+    letter-spacing: 1.5px;
+    
+
+ }
+
+ .conteiner > div.itemd > p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: bolder; 
+  
+  
+ }
+
+
+
+ .buton{
+  padding: 5px 20px;
+  border: 2px;
+  background-color: rgb(0, 247, 255);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all .7s ease;
+}
+
+.buton:hover{
+  letter-spacing: 5px;
+  background-color: rgba(52, 138, 252, 0.767);
+  color: white;
+  box-shadow: rgba(52, 138, 252, 0.767);
+}
+
+.buton:active{
+  letter-spacing: 5px;
+  background-color: rgba(52, 138, 252, 0.767);
+  color:white;
+  box-shadow: rgba(52, 138, 252, 0.767);
+  transform: translateY(10px);
+  transition: 100ms;
+}
+ .caja{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 10px 70px 20px 70px;
+  border: 5px solid rgba(30, 201, 221, 0.3) ;
+  border-radius: 11px ;
+  text-align: center;
+
+}
+
+ 
+
+ .caja > div {
+  background-color: rgba(30, 201, 221, 0.3);
+  font-size: 18px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-style: italic;
+ }
+
+
+
+
+ 
+ 
+  
+@media only screen and (min-width: 600px){
+    .grid-conteiner{
+        grid-template-columns:1fr 2fr ;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .grid-conteiner{
+        grid-template-columns: 1fr;
+        
+    }
+}
+   
+
+
+  @media only screen and (min-width: 600px){
+    .cabezal{
+        grid-template-columns:2fr 1fr;
+     
+        
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .cabezal{
+        grid-template-columns: 1fr ;
+        
+    }
+}
+   
+@media only screen and (min-width: 600px){
+  .grid-contenedor{
+      grid-template-columns:1fr 1fr 1fr ;
+  }
+}
+
+@media only screen and (max-width: 590px){
+  .grid-contenedor{
+      grid-template-columns: 1fr;
+      
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  .conteiner{
+      grid-template-columns:1fr 1fr 1fr ;
+   
+      
+  }
+}
+
+
+@media only screen and (max-width: 900px){
+  .conteiner{
+      grid-template-columns: 1fr 1fr ;
+  }
+}
+
+
+@media only screen and (max-width: 590px){
+  .conteiner{
+      grid-template-columns: 1fr;
+      
+  }
+}
+
+
+
+@media only screen and (min-width: 1000px){
+  .caja{
+      grid-template-columns:1fr 1fr 1fr 1fr 1fr ;
+   
+      
+  }
+}
+
+
+@media only screen and (max-width: 900px){
+  .caja{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 590px){
+  .caja{
+      grid-template-columns: 1fr;
+      
+  }
+}
