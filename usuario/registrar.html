@@ -7,17 +7,32 @@
     <meta name="author" content="Grupo 1">
     <title>ClinicAI - Registrar</title>
     <link href="../CSS/tomy.css" rel="stylesheet">
+    <link href="../CSS/Cande.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="page-register">
+<body>
+
+  <header>
+    <div class="cabezal">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="/source/img/sublogo.jpg" alt="logotipo" width="275" height="75">
+          </a>
+        </div>
+           <div class="buscador"> <input type="text" placeholder="consultar" class="escritura">
+            <button type="button" class="boton">click</button></div>
+        </div>
+  </header>
+
+<div class="page-register">
     <div class="container">
         <div class="title">Registrar</div>
         <div class="content">
-          <form action="#">
+          <form action="#" id="formulario" method="post">
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Nombre</span>
@@ -61,11 +76,60 @@
             </div>
 
             <div class="button" onclick="validarRegistro()">
-              <input type="submit" value="Registrar">
+              <button type="button" >Registrar</button>
             </div>
           </form>
         </div>
       </div>
       <script src="../JS/scripts.js"></script>
+    </div>
+
+    <footer>
+      <div class="cajon">
+        <h1>ClinicAI</h1>
+      <div class="conteiner">
+          <div class="logo-footer"> <img src="/source/img/logosF.png" alt="footer"></div>
+          <div class="itemb">
+              <ul>
+                  <li> <a href="Usuario">Usuario</a></li>
+                  <li> <a href="Obras Sociales">Obras Sociales</a></li>
+                  <li> <a href="Sobre Nosotros">Sobre Nosotros</a></li>
+                  <li> <a href="Especialidades">Especialidades</a></li>
+                  <li> <a href="Sanatorios">Sanatorios</a></li>
+              </ul>
+          </div>
+          <div class="itemd">
+            <p>Nuevas Reseñas</p>
+            <textarea name="message" rows="10" cols="25" id="resenia"></textarea> <br>
+            <button type="submit" class="buton" onclick="resenia()">Enviar</button>
+          </div>
+          <script>
+            function resenia()
+            {
+              const resenia = document.getElementById("resenia");
+              if(resenia.value.length == 0)
+              {
+                alert('por favor llene los datos');
+              }
+              else 
+              {
+                alert('Gracias por visitarnos!');
+                document.getElementById("resenia").value = "";
+              }
+            }
+          </script>
+      </div>
+      <div class="caja">
+        <div class="pies">
+          <p> <i class="fa-brands fa-square-facebook fa-2xl"> </i> <i class="fa-brands fa-instagram fa-2xl"></i> <i class="fa-brands fa-square-x-twitter fa-2xl"></i></p>
+              <p> </p>
+             <p> </p></div>
+        <div class="pies"> <p> 2024, derechos reservados para CAI </p></div>
+        <div class="pies"> <p>Politicvas De privacidad</p></div>
+        <div class="pies"> <p>Terminos y condiciones</p></div>
+        <div class="pies"> <p>Ayuda y soporte</p></div>
+      </div>
+    </div>
+      </footer>
 </body>
 </html>

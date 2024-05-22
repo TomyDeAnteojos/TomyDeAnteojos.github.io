@@ -351,11 +351,11 @@
         display: none;
     }
 
-    .button{
+    .button,button{
         height: 45px;
         margin: 35px 0;
 
-        input{
+        button{
             height: 100%;
             width: 100%;
             border-radius: 5px;

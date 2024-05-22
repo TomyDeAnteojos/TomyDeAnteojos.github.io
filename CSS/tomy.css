@@ -296,11 +296,11 @@
 .page-register .container form input[type=radio] {
   display: none;
 }
-.page-register .container form .button {
+.page-register .container form .button, .page-register .container form button {
   height: 45px;
   margin: 35px 0;
 }
-.page-register .container form .button input {
+.page-register .container form .button button, .page-register .container form button button {
   height: 100%;
   width: 100%;
   border-radius: 5px;
@@ -313,7 +313,7 @@
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-.page-register .container form .button input:hover {
+.page-register .container form .button input:hover, .page-register .container form button input:hover {
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
 }
