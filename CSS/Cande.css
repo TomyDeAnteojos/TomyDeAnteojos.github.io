@@ -8,6 +8,8 @@ body{
    gap: 10px;
    width: 100%;
    background-image: url(../source/img/header1.jpg);
+   background-size: cover;
+   background-position: center;
   
 }
 .cabezal > div{
@@ -70,6 +72,9 @@ body{
     margin: 30px 30px 30px 30px;
     padding: 10px 10px 10px 10px;
     background-image: url(../source/img/fondo\ contacto.jpg);
+    background-size: cover;
+    background-position: center;
+   
   }
 
 
@@ -150,6 +155,9 @@ body{
 
 .cajon {
 background-image: url(../source/img/footer1.jpg);
+background-size: cover;
+background-position: center;
+
 }
   
  .cajon > h1 {
