@@ -45,7 +45,19 @@ Primera Etapa:
       Login - Tomi
     </td>
     <td>
-      registrar - Tomi
+      header - Cande<br/>
+      footer - Cande<br/>
+      Contactos - Cande<br/>
+      Nav - Valen<br/>
+      Medicos - Valen<br/>
+      Chat - Valen<br/>
+      Sanatorios - Valen<br/>
+      Obra Sociales - Valen<br/>
+      gestion turnos - Nico<br/>
+      Especialidad - Nico<br/>
+      perfil - Nico<br/>
+      index - Tomi<br/>
+      Login - Tomi
     </td>
   </tr>
     
