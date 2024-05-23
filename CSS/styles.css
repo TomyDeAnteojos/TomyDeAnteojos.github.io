@@ -18,33 +18,33 @@
     margin-bottom: 10px;
     padding: 10%;
   }
-  .turnos{
+  .turnos {
     background-image: url("../source/img/entrada.jpg");
-    
-    .titulo {
-      color: aliceblue;
-      margin: 10px;
-      padding: 20px;
-      
-    }    
-    .subtitulo {
-      color: aliceblue;
-      margin: 10px;
-      padding: 0px;
+    .titulo { 
+        color: aliceblue; 
+        margin: 10px; 
+        padding: 20px; 
     }
-    div {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      background-color: aliceblue;
-      font-size: 15px;
-      margin: 0px 0px 0px 20px;
-      padding: 10px 5px;
-      max-width: 600px;
-    }            
-}
+    .subtitulo {
+        color: aliceblue; 
+        margin: 10px;
+        padding: 0px;
+    }
+    div { 
+        font-family: Georgia, "Times New Roman", Times, serif; 
+        background-color: aliceblue; 
+        font-size: 15px; 
+        margin: 0px 0px 0px 20px; 
+        padding: 10px 5px; 
+        max-width: 600px; 
+    }
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* tablets */
+  
 }
 @media screen and (max-width: 767px) {
   /* celulares */
+  
 }/*# sourceMappingURL=styles.css.map */
