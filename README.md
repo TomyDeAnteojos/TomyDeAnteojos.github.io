@@ -22,10 +22,12 @@ Primera Etapa:
       gestion turnos<br/>
       contacto<br/>
       --dashboard<br/>
+      --dashboard<br/>
       gestion usuario<br/>
       Medicos<br/>
       Especialidad<br/>
       Sanatorios<br/>
+      Obra Sociales<br>
       Obra Sociales<br>
       chat(marcar "pagina en construccion")
     </td>
@@ -34,11 +36,17 @@ Primera Etapa:
       footer - Cande<br/>
       Contactos - Cande<br/>
       Nav - Valen<br/>
+      Nav - Valen<br/>
       Medicos - Valen<br/>
+      Chat - Valen<br/>
       Chat - Valen<br/>
       Sanatorios - Valen<br/>
       Obra Sociales - Valen<br/>
       gestion turnos - Nico<br/>
+      Especialidad - Nico<br/>
+      perfil - Nico<br/>
+      index - Tomi<br/>
+      Login - Tomi
       Especialidad - Nico<br/>
       perfil - Nico<br/>
       index - Tomi<br/>
@@ -60,6 +68,7 @@ Primera Etapa:
       Login - Tomi
     </td>
   </tr>
+    
     
 </table>
 
