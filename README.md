@@ -21,31 +21,33 @@ Primera Etapa:
       registrar<br/>
       gestion turnos<br/>
       contacto<br/>
-      dashboard<br/>
+      --dashboard<br/>
       gestion usuario<br/>
       Medicos<br/>
       Especialidad<br/>
       Sanatorios<br/>
-      Obra Sociales
+      Obra Sociales<br>
       chat(marcar "pagina en construccion")
     </td>
     <td>
-      Login - Tomi <br/>
       header - Cande<br/>
       footer - Cande<br/>
-      Nav - Valen<br/>
       Contactos - Cande<br/>
+      Nav - Valen<br/>
       Medicos - Valen<br/>
-      Especialidad - Nico<br/>
+      Chat - Valen<br/>
       Sanatorios - Valen<br/>
       Obra Sociales - Valen<br/>
       gestion turnos - Nico<br/>
-      registrar - Tomi<br/>
-      perfil - Nico
+      Especialidad - Nico<br/>
+      perfil - Nico<br/>
+      index - Tomi<br/>
+      Login - Tomi
     </td>
     <td>
-      -
+      registrar - Tomi
     </td>
   </tr>
+    
 </table>
 

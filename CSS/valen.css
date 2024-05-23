@@ -1,0 +1,92 @@
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin-top: 20px;
+    }
+}
+
+.client-logo-area .section-title-two {
+	text-align: center;
+	max-width: 550px;
+	margin: auto;
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 5;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.client-logo-area .section-title-two {
+	  margin-bottom: 45px;
+	}
+  }
+  @media (max-width: 767px) {
+	.client-logo-area .section-title-two {
+	  margin-bottom: 35px;
+	}
+  }
+  .client-logo-area .section-title-two span {
+	text-transform: capitalize;
+	color: var(--white);
+	background: var(--primary);
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 5px 15px;
+	border-radius: 4px;
+  }
+  .client-logo-area .section-title-two h2 {
+	margin-bottom: 15px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.client-logo-area .section-title-two h2 {
+	  font-size: 2rem;
+	  line-height: 2.8rem;
+	}
+  }
+  @media (max-width: 767px) {
+	.client-logo-area .section-title-two h2 {
+	  font-size: 1.5rem;
+	  line-height: 1.9rem;
+	}
+  }
+  .client-logo-area .section-title-two p {
+	color: var(--dark-3);
+  }
+  
+  .client-logo-one {
+	padding-top: 100px;
+	padding-bottom: 100px;
+  }
+  .client-logo-one .single-client {
+	margin-top: 30px;
+  }
+
+  .client-logo {
+	max-width: 100%;
+	height: auto;
+	width: 150px; 
+	margin: 0 auto; 
+}
+.single-client {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px; 
+}
