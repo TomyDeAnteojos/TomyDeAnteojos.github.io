@@ -3,17 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Clinica, Hospital, Inteligencia Artificial, Turnos, Biomedicina, Medicina, Salud, Gestion">
-    <meta name="author" content="Grupo 1">
-
-    <link href="../CSS/styles.css" rel="stylesheet">
-    
-    <title>ClinicAI - Gestion de Turnos</title>
+    <title>Gestion de turnos</title>
+    <link rel="stylesheet" href="../CSS/nico.css">
 </head>
-
 <body>
-    
+    <div class="contenido">
 
-    
+        <h1>Gestion de turnos</h1>
+
+        <div class="solicitud">
+
+
+            <div class="datos">
+                <h3>Solicitud de turno</h3>
+                <form action="link" method="post">
+                    <fieldset>
+                    <legend>DATOS PERSONALES</legend>
+                    <p>
+                        <label for="ape">Indique su/s apellido/s: </label>
+                        <input type="text" name="apellido" id="ape" required>
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="nom">Indique su/s nombre/s: </label>
+                        <input type="text" name="nombre" id="nom" required>
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="ed">Indique su edad:</label>
+                        <input type="number" name="edad" id="ed" required>
+                    </p>
+                    <br><br>
+
+
+
+                    <p>
+                        <label for="email">Indique su E-mail: </label>
+                        <input type="email" name="E-mail" id="email" required>
+                    </p>
+                    <br><br>
+
+                    <p>
+                        <label for="tel">Numero de telefono o celular: </label>
+                        <input type="number" name="telefono" id="tel" required>
+                    </p>
+                    <br><br>
+
+                    <p>
+                        <label for="pe">Indique su peso (kg):</label>
+                        <input type="number" name="peso" id="pe" required>
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="doc">Tipo de documento:</label>
+                        <select name="tipodedocumento" id="doc">
+                            <option value="0"></option>
+                            <option value="1">DNI</option>
+                            <option value="2">PAS</option>
+                            <option value="3">LC</option>
+                            <option value="4">LE</option>
+                        </select>
+                    </p>
+                    <br><br>
+
+                    <p>
+                        <label for="num">Indique su número:</label>
+                        <input type="number" name="numero" id="num" required>
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="obs">Obra social:</label>
+                        <input type="text" name="obrasocial" id="obs">
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="tur">Fecha para el turno:</label>
+                        <input type="date" name="turno" id="tur">
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="med">Especialista Médico:</label>
+                        <select name="especialistamedico" id="med" required>
+                        <option value="0"></option>
+                        <option value="1">Cardiología</option>
+                        <option value="2">Kinesiología</option>
+                        <option value="3">Guardia</option>
+                        <option value="4">Laboratorio</option>
+                        <option value="5">Cirugía</option>
+                        </select>
+                    </p>
+                    <br><br>
+
+
+                    <p>
+                        <label for="pdf">Adjunte Pedido Médico escaneado si lo posee:</label>
+                        <br>
+                        <input type="file" name="pedidomedico" id="pdf">
+                    </p>
+                    <br><br>
+
+                    <p>
+                        <label for="desc">Descripcion del estudio:</label>
+                        <br>
+                        <textarea name="descripcionestudio" id="desc" cols="50" rows="10"></textarea>
+                    </p>
+                    <br><br>
+
+                    <p>
+                        <button type="submit">
+                            Enviar
+                        </button>
+                    </p>
+                </fieldset>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
 </body>
 </html>

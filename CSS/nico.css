@@ -1,0 +1,229 @@
+
+@media only screen and (min-width: 1000px) {
+    /* computadoras */
+    /*turnos*/
+    body{
+      background-image: url(../source/img/entrada.jpg);
+  }
+  h1 {
+    text-align: start;
+    font-size: 2.8em;
+  }
+  
+  .contenido {
+      padding: 5px 5px;
+      margin: 5px 5px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  }
+  
+  .datos form button,
+  .datos form input,
+  .datos form textarea,
+  .datos form select {
+      width: 30%;
+      padding: 0.5em;
+      border: 2px solid black;
+  
+  }
+  
+  
+  .datos{
+      color: white;
+      padding: 10px;
+      margin: 20px;
+      border: 20px;
+      background-color: grey;
+      width: 70%;
+      
+  }
+  h3{
+      text-align: center;
+      color: black;
+      font-size: 2em;
+  }
+
+
+
+
+  /*Perfil*/
+  .perfil {
+    display: grid;
+    justify-content: space-between;
+  }
+
+  .datos {
+    display: inline-grid;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 20px;
+    width: 290px;
+    height: 300px;
+
+  }
+
+
+  img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .grid-item {
+    background-color: lightgray;
+    
+  }
+  
+  
+  
+  
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+    /* tablets */
+    /*turnos*/
+    body{
+      background-image: url(../source/img/entrada.jpg);
+  }
+  h1 {
+    text-align: start;
+    font-size: 3em;
+  }
+  
+  .contenido {
+      padding: 5px 5px;
+      margin: 5px 5px ;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  }
+  
+  .datos form button,
+  .datos form input,
+  .datos form textarea,
+  .datos form select {
+      width: 30%;
+      padding: 0.5em;
+      border: 2px solid black;
+  
+  }
+  
+  .datos{
+      color: white;
+      padding: 5px 5px;
+      margin: 5px 5px;
+      background-color: grey;
+      width: 70%;
+  }
+  h3{
+      text-align: center;
+      color: black;
+      font-size: 2em;
+  }
+  
+  /*Perfil*/
+  .perfil {
+    
+  }
+
+  .datos {
+    display: inline-grid;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 20px;
+    width: 40%;
+    height: 60%;
+
+  }
+
+
+  img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .grid-item {
+    background-color: lightgray;
+  }
+
+
+
+}
+
+
+
+  @media only screen and (max-width: 767px) {
+    /* celulares */
+    /*turnos*/
+    body{
+      background-image: url(../source/img/entrada.jpg);
+  }
+  h1 {
+    text-align: start;
+    font-size: 3em;
+  }
+  .contenido {
+      padding: 5px 5px;
+      margin: 5px 5px ;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  }
+  
+  .datos form button,
+  .datos form input,
+  .datos form textarea,
+  .datos form select {
+      width: 100%;
+      padding: 0.5em;
+      border: 2px solid black;
+
+  
+  }
+  
+  .datos{
+      color: white;
+      padding: 5px 5px;
+      margin: 5px 5px;
+      background-color: grey;
+      width: 100%;
+  }
+  h3{
+      text-align: center;
+      color: black;
+      font-size: 2em;
+  }
+
+
+
+  /*Perfil*/
+  .perfil {
+    
+  }
+
+  .datos {
+    display: inline-grid;
+    background-color: lightblue;
+    padding: 1em;
+    margin: 1em;
+    border: 1em;
+    width: 100%;
+    height: 60%;
+
+  }
+
+
+  img {
+    padding: 1em;
+    margin: 1em;
+    width: 20%;
+    height: 50%;
+
+  }
+
+  .grid-item {
+    background-color: lightgray;
+    width: 100%;
+    
+  }
+
+
+}
