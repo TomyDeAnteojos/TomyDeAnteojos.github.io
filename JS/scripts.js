@@ -24,3 +24,14 @@ function validarRegistro()
                           window.alert("verifique los datos");
                   }
               }
+
+function validarTurno()
+{
+    const oSoc = document.getElementById('obra_social');
+    const fec = document.getElementById('fecha');
+
+    if(oSoc.value.length == 0 || !fec.value)
+    {
+        window.alert("verifique los datos");
+    }
+}
