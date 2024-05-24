@@ -61,20 +61,20 @@
                 <input type="text" placeholder="Ingresa tu obra social" id="obra_social">
             </div>
 
-            <div class="item">
+            <div class="item" id="especialidad">
                 <label for="especialidad">Selecciona una especialidad</label>
-                <select id="especialidad" name="especialidad">
-                    <option value="e1">Cardiología</option>
-                    <option value="e2">Kinesiología</option>
-                    <option value="e3">Guardia</option>
-                    <option value="e4">Laboratorio</option>
-                    <option value="e5">Cirugía</option>
+                <select id="esp" name="especialidad">
+                    <option value="1">Cardiología</option>
+                    <option value="2">Kinesiología</option>
+                    <option value="3">Guardia</option>
+                    <option value="4">Laboratorio</option>
+                    <option value="5">Cirugía</option>
                 </select>
             </div>
 
-            <div class="item">
+            <div class="item" id="medico">
                 <label for="medico">Seleccione un medico</label>
-                <select id="medico" name="medico">
+                <select id="med" name="medico">
                     <option value="1">Pepito</option>
                     <option value="2">Juancito</option>
                     <option value="3">Juan</option>
@@ -83,15 +83,16 @@
                 </select>
             </div>
 
-            <div class="item">
+            <div class="item" id="fecha">
                 <label for="tur">Fecha para el turno</label>
                 <input type="date" name="turno" id="tur">
             </div>
 
             <div class="submit">
-                <button type="submit">Enviar turno</button>
+                <button type="submit" onclick="validarTurno()">Enviar turno</button>
             </div>
         </form>
+        <script src="../JS/scripts.js"></script>
     </div>
 
     <footer>
