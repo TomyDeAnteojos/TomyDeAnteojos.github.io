@@ -53,121 +53,45 @@
         </div>
     </nav>
 
-    <div class="contenido">
-
-        <h1>Gestion de turnos</h1>
-
-        <div class="solicitud">
-
-
-
-            <div class="page-register">
-                <div class="container">
-                    <div class="title">Registrar</div>
-                    <div class="content">
-                      <form action="#" id="formulario" method="post">
-                        <div class="user-details">
-                          <div class="input-box">
-                            <span class="details">Obra Social</span>
-                            <input type="text" placeholder="Ingresa tu obra social" id="obra_social">
-                          </div>
-
-                          <div class="gender-details" id="genero">
-                            <div class="gender-details" id="genero">
-                                <input type="radio" name="esp" id="dot-1">
-                                <input type="radio" name="esp" id="dot-2">
-                                <span class="gender-title">Genero</span>
-                                <div class="category">
-                                  <label for="dot-1">
-                                  <span class="dot one"></span>
-                                  <span class="gender">Hombre</span>
-                                </label>
-                                <label for="dot-2">
-                                  <span class="dot two"></span>
-                                  <span class="gender">Mujer</span>
-                                </label>
-                                </div>
-
-                            <span class="gender-title">Genero</span>
-                            <div class="category">
-                              <label for="dot-1">
-                              <span class="dot one"></span>
-                              <span class="gender">Hombre</span>
-                            </label>
-                            <label for="dot-2">
-                              <span class="dot two"></span>
-                              <span class="gender">Mujer</span>
-                            </label>
-                            </div>
-
-                          <div class="input-box">
-                            <span class="details">Apellido</span>
-                            <input type="text" placeholder="Ingresa tu apellido" id="last_name">
-                          </div>
-                          <div class="input-box">
-                            <span class="details">Email</span>
-                            <input type="text" placeholder="Ingresa tu Email" id="email">
-                          </div>
-
-                        </div>
-
-                        <div class="button">
-                          <button type="submit">Enviar turno</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-
-            <div class="datos">
-                <h3>Solicitud de turno</h3>
-                <form action="#" method="post">
-                    <fieldset>
-                    <legend>DATOS PERSONALES</legend>
-
-                    <p>
-                        <label for="obs">Obra social:</label>
-                        <input type="text" name="obrasocial" id="obs">
-                    </p>
-                    <br><br>
-
-
-
-                    <p>
-                        <label for="tur">Fecha para el turno:</label>
-                        <input type="date" name="turno" id="tur">
-                    </p>
-                    <br><br>
-
-
-                    <p>
-                        <label for="med">Especialista Médico:</label>
-                        <select name="especialistamedico" id="med" required>
-                        <option value="0"></option>
-                        <option value="1">Cardiología</option>
-                        <option value="2">Kinesiología</option>
-                        <option value="3">Guardia</option>
-                        <option value="4">Laboratorio</option>
-                        <option value="5">Cirugía</option>
-                        </select>
-                    </p>
-                    <br><br>
-
-
-
-
-                    <p>
-                        <button type="submit">
-                            Enviar
-                        </button>
-                    </p>
-                </fieldset>
-                </form>
-
+    <div class="container">
+        <form action="#" id="g_turno" method="post">
+            <h1>Gestionar turno</h1>
+            <div class="item">
+                <span class="details">Obra Social</span>
+                <input type="text" placeholder="Ingresa tu obra social" id="obra_social">
             </div>
 
+            <div class="item">
+                <label for="especialidad">Selecciona una especialidad</label>
+                <select id="especialidad" name="especialidad">
+                    <option value="e1">Cardiología</option>
+                    <option value="e2">Kinesiología</option>
+                    <option value="e3">Guardia</option>
+                    <option value="e4">Laboratorio</option>
+                    <option value="e5">Cirugía</option>
+                </select>
+            </div>
 
-        </div>
+            <div class="item">
+                <label for="medico">Seleccione un medico</label>
+                <select id="medico" name="medico">
+                    <option value="1">Pepito</option>
+                    <option value="2">Juancito</option>
+                    <option value="3">Juan</option>
+                    <option value="4">Messi</option>
+                    <option value="5">Arruga</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <label for="tur">Fecha para el turno</label>
+                <input type="date" name="turno" id="tur">
+            </div>
+
+            <div class="submit">
+                <button type="submit">Enviar turno</button>
+            </div>
+        </form>
     </div>
 
     <footer>
