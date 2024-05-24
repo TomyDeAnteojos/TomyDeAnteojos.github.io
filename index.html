@@ -6,9 +6,14 @@
     <meta name="keywords" content="Clinica, Hospital, Inteligencia Artificial, Turnos, Biomedicina, Medicina, Salud">
     <meta name="author" content="Grupo 1">
 
+    <link href="../CSS/tomy.css" rel="stylesheet">
+    <link href="../CSS/Cande.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/clients/client-2/assets/css/client-2.css">
-    <link href="../CSS/tomy.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/valen.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <title>ClinicAI - Menu Principal</title>
 </head>
 
@@ -114,8 +119,52 @@
     </div>
 
     <footer>
-
-    </footer>
+        <div class="cajon">
+          <h1>ClinicAI</h1>
+        <div class="conteiner">
+            <div class="logo-footer"> <img src="/source/img/logosF.png" alt="footer"></div>
+            <div class="itemb">
+                <ul>
+                    <li> <a href="Usuario">Usuario</a></li>
+                    <li> <a href="Obras Sociales">Obras Sociales</a></li>
+                    <li> <a href="Sobre Nosotros">Sobre Nosotros</a></li>
+                    <li> <a href="Especialidades">Especialidades</a></li>
+                    <li> <a href="Sanatorios">Sanatorios</a></li>
+                </ul>
+            </div>
+            <div class="itemd">
+              <p>Nuevas Reseñas</p>
+              <textarea name="message" rows="10" cols="25" id="resenia"></textarea> <br>
+              <button type="submit" class="buton" onclick="resenia()">Enviar</button>
+            </div>
+            <script>
+              function resenia()
+              {
+                const resenia = document.getElementById("resenia");
+                if(resenia.value.length == 0)
+                {
+                  alert('por favor llene los datos');
+                }
+                else 
+                {
+                  alert('Gracias por visitarnos!');
+                  document.getElementById("resenia").value = "";
+                }
+              }
+            </script>
+        </div>
+        <div class="caja">
+          <div class="pies">
+            <p> <i class="fa-brands fa-square-facebook fa-2xl"> </i> <i class="fa-brands fa-instagram fa-2xl"></i> <i class="fa-brands fa-square-x-twitter fa-2xl"></i></p>
+                <p> </p>
+               <p> </p></div>
+          <div class="pies"> <p> 2024, derechos reservados para CAI </p></div>
+          <div class="pies"> <p>Politicvas De privacidad</p></div>
+          <div class="pies"> <p>Terminos y condiciones</p></div>
+          <div class="pies"> <p>Ayuda y soporte</p></div>
+        </div>
+      </div>
+        </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
