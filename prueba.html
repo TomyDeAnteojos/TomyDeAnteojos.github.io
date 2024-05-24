@@ -28,12 +28,25 @@
             <label for="fname">Nombre:</label>
             <input type="text" id="fname" name="fname"><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email"><br><br>
             <label for="lname">Mensaje:</label>
             <input type="text" id="text" name="text"> <br><br>
-            <button type="submit" class="bot">Enviar</button>
+            <button type="submit" class="bot" onclick="validarContacto()">Enviar</button>
           </form>
         </div>
+        <script>
+          function validarContacto()
+          {
+            const name = document.getElementById('fname');
+            const email = document.getElementById('email');
+            const mess = document.getElementById('text');
+
+            if(name.value.length == 0 || email.value.length == 0 || mess.value.length == 0)
+            {
+              window.alert("verifique los datos");
+            }
+          }
+        </script>
     </div>
 
 
