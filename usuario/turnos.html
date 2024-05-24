@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de turnos</title>
     <link rel="stylesheet" href="../CSS/nico.css">
+    <link href="../CSS/Cande.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/clients/client-2/assets/css/client-2.css">
     <link rel="stylesheet" href="CSS/valen.css">
@@ -13,12 +14,110 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../GuiaMedica.html">Clinica IA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="turnos.html">Gestion Turnos</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Secciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="../index.html#contact">Contactos</a>
+                <a class="dropdown-item" href="../GuiaMedica.html#medicos">Medicos</a>
+                <a class="dropdown-item" href="../GuiaMedica.html#especialidades">Especialidad</a>
+                <a class="dropdown-item" href="../GuiaMedica.html#ubicaciones">Sanatorios</a>
+                <a class="dropdown-item" href="../GuiaMedica.html#obra_social">Obra Sociales</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="login.html">Iniciar Sesion</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registrar.html">Registrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="perfil.html">Perfil</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
     <div class="contenido">
 
         <h1>Gestion de turnos</h1>
 
         <div class="solicitud">
 
+
+
+            <div class="page-register">
+                <div class="container">
+                    <div class="title">Registrar</div>
+                    <div class="content">
+                      <form action="#" id="formulario" method="post">
+                        <div class="user-details">
+                          <div class="input-box">
+                            <span class="details">Obra Social</span>
+                            <input type="text" placeholder="Ingresa tu obra social" id="obra_social">
+                          </div>
+
+                          <div class="gender-details" id="genero">
+                            <div class="gender-details" id="genero">
+                                <input type="radio" name="esp" id="dot-1">
+                                <input type="radio" name="esp" id="dot-2">
+                                <span class="gender-title">Genero</span>
+                                <div class="category">
+                                  <label for="dot-1">
+                                  <span class="dot one"></span>
+                                  <span class="gender">Hombre</span>
+                                </label>
+                                <label for="dot-2">
+                                  <span class="dot two"></span>
+                                  <span class="gender">Mujer</span>
+                                </label>
+                                </div>
+
+                            <span class="gender-title">Genero</span>
+                            <div class="category">
+                              <label for="dot-1">
+                              <span class="dot one"></span>
+                              <span class="gender">Hombre</span>
+                            </label>
+                            <label for="dot-2">
+                              <span class="dot two"></span>
+                              <span class="gender">Mujer</span>
+                            </label>
+                            </div>
+
+                          <div class="input-box">
+                            <span class="details">Apellido</span>
+                            <input type="text" placeholder="Ingresa tu apellido" id="last_name">
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Ingresa tu Email" id="email">
+                          </div>
+
+                        </div>
+
+                        <div class="button">
+                          <button type="submit">Enviar turno</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
 
             <div class="datos">
                 <h3>Solicitud de turno</h3>
@@ -31,6 +130,7 @@
                         <input type="text" name="obrasocial" id="obs">
                     </p>
                     <br><br>
+
 
 
                     <p>
