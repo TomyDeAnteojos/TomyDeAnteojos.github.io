@@ -1,0 +1,28 @@
+.tittle-main {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+}
+.tittle-main h1 {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+}/*# sourceMappingURL=styles.css.map */
