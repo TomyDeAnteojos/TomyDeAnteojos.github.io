@@ -13,20 +13,19 @@
     </div>
 
     <div class="login">
-        <form action="#" method="post">
+        <form id="loginForm" action="#" method="post">
             <input type="text" id="userName" maxlength="25" placeholder="Nombre de Usuario">
             <input type="password" id="psw" maxlength="25" placeholder="Ingrese su contraseña">
 
-            <input type="submit" id="logear">
+            <input type="submit" id="logear" value="Ingresar">
 
             <div>
                 <input type="checkbox" onclick="viewPsw()"> Mostrar contraseñas
             </div>
         </form>
-
-        <div class="msj-alert">
-            <!-- INGRESAR MENSAJE -->
-        </div>
+        <div class="msj-alert" id="msj-alert"></div>
     </div>
+
+    <script src="src/js/form-validation.js"></script>
 </body>
 </html>
