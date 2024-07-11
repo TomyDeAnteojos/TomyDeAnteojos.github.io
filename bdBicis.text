@@ -1,0 +1,48 @@
+/*
+DROP DATABASE IF EXISTS bdBicis;
+
+CREATE DATABASE bdBicis;
+USE bdBicis;
+
+CREATE TABLE usuarios(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    pass VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE bicicletas(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR(50) NOT NULL,
+    usuario INT NOT NULL,
+    precio decimal(9,2),
+    color VARCHAR(20),
+    FOREIGN KEY (usuario) REFERENCES usuarios(id)
+);
+
+INSERT INTO usuarios (nombre, pass) VALUES ('cande', '1');
+INSERT INTO usuarios (nombre, pass) VALUES ('valen', '2');
+INSERT INTO usuarios (nombre, pass) VALUES ('tomi', '3');
+INSERT INTO usuarios (nombre, pass) VALUES ('maximiliano', '4');
+INSERT INTO usuarios (nombre, pass) VALUES ('codo', '5');
+
+
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 1, 500.00, 'Rojo');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 1, 700.00, 'Verde');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 1, 450.00, 'Azul');
+
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 2, 600.00, 'Negro');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 2, 550.00, 'Blanco');
+
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 3, 800.00, 'Gris');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 3, 900.00, 'Naranja');
+
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 4, 1000.00, 'Negro');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 4, 1200.00, 'Rojo');
+
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 1500.00, 'Verde');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 1800.00, 'Azul');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 700.00, 'Rojo');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 800.00, 'Negro');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 600.00, 'Verde');
+INSERT INTO bicicletas (modelo, usuario, precio, color) VALUES ('BMX', 5, 500.00, 'Blanco');
+*/
