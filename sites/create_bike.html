@@ -7,70 +7,74 @@
     <link rel="stylesheet" href="../src/css/cande.css">
 </head>
 <body>
-
-
-
     <ul>
-        <li><a class="active" href="#creatubici">Crea tu bici</a></li>
-        <li><a href="#catalogo">Catalogo</a></li>
-        <li><a href="#mis creaciones">Mis creaciones</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <li><a class="active" href="/sites/create_bike.html">Crea tu bici</a></li>
+      <li><a href="/sites/catalogue.html">Catálogo</a></li>
+      <li><a href="/sites/my_designs.html">Mis creaciones</a></li>
+      <li><a href="/sites/contact.html">Contacto</a></li>
+    </ul>
 
-
-
-<!--esto es para crear
--->
     <div class="caja">
         <h2>Crea tu Bici</h2>
-        <form id="create">
-        <div class="row">
-          <div class="p1">
-            <label for="name">Nombre:</label>
-          </div>
-          <div class="p2">
-            <input type="text" id="name" placeholder="Nombre" required>
-          </div>
-        </div>
-        <div class="row">
-          <div class="p1">
-            <label for="precio">Precio:</label>
-          </div>
-          <div class="p2">
-            <input type="text" id="precio" placeholder="Rango de precio" required>
-          </div>
-        </div>
-        <div class="row">
-            <div class="p1">
-              <label for="velocidades">Velocidades:</label>
-            </div>
-            <div class="p2">
-              <input type="text" id="velocidades" placeholder="Rango de velocidad" required>
-            </div>
-          </div>
-        <div class="row">
-            <div class="p1">
-              <label for="rueda">Rodado:</label>
-            </div>
-            <div class="p2">
-              <input type="text" id="rueda" placeholder="rodados" required>
-            </div>
-          </div>
+        <form id="create" enctype="multipart/form-data">
           <div class="row">
-            <div class="p1">
-              <label for="imagen">Imagen:</label>
-            </div>
-            <div class="p2">
-              <input type="text" id="img" placeholder="imagen" required>
-            </div>
+            <div class="p1"> <label for="modelo">Modelo:</label> </div>
+            <div class="p2"> <input type="text" id="modelo" name="modelo" placeholder="modelo" required> </div>
           </div>
-        <br>
-        <div class="row">
-                <button type="button" class="boton" id="submitButton">Enviar</button>
-            </div>
+
+          <div class="row">
+            <div class="p1"> <label for="usuario">Usuario:</label> </div>
+            <div class="p2"> <input type="number" id="usuario" name="usuario" placeholder="Número de usuario" required> </div>
+          </div>
+
+          <div class="row">
+            <div class="p1"> <label for="precio">Precio:</label> </div>
+            <div class="p2"> <input type="text" id="precio" name="precio" placeholder="Rango de precio" required> </div>
+          </div>
+
+          <div class="row">
+            <div class="p1"> <label for="color">Color:</label> </div>
+            <div class="p2">  <input type="text" id="color" name="color" placeholder="color" required> </div>
+          </div>
+          <br>
+          <div class="row"> <button type="submit" class="boton" >Enviar</button> </div>
         </form>
       </div>
 
 <script src="../src/js/cande.js"></script>
+<script>
+  const URL = "http://127.0.0.1:5000/";
+
+  document.getElementById('create').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var formData = new FormData(this);
+
+      fetch(URL + 'bicicletas/agregar', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => {
+          if (response.ok) {
+              return response.json();
+          } else {
+              throw new Error('Error al agregar la bici.');
+          }
+      })
+      .then(data => {
+          alert('La bici se ha agregado correctamente.');
+      })
+      .catch(error => {
+          alert('Error al agregar la bici.');
+      })
+      .finally(() => {
+          document.getElementById('modelo').value = "";
+          document.getElementById('usuario').value = "";
+          document.getElementById('precio').value = "";
+          document.getElementById('color').value = "";
+      });
+  });
+</script>
+
 </body>
 </html>

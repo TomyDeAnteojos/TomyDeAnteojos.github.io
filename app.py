@@ -90,12 +90,16 @@ def showBicis(id):
 # Inserta una bici creada por un usuario - CREATE_BIKE
 @app.route("/bicicletas/agregar", methods=["POST"])
 def insertBici():
-    data = request.get_json() or request.form
-    modelo = data['modelo']
-    usuario = data['usuario']
-    precio = data['precio']
-    color = data['color']
-    if bicis.insertBici(modelo, usuario, precio, color):
+    modelo = request.form['modelo']
+    usuario = request.form['usuario']
+    precio = request.form['precio']
+    color = request.form['color']
+
+    print(f"Modelo: {modelo}, Usuario: {usuario}, Precio: {precio}, Color: {color}")
+
+
+    b = bicis.insertBici(modelo, usuario, precio, color)
+    if b:
         return jsonify({"mensaje": "Bici agregada"}), 201
     else:
         return jsonify({"mensaje": "Error al agregar la bici"}), 500
