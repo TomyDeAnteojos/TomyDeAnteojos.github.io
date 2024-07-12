@@ -1,177 +1,173 @@
+
 body{
-    background-color: rgb(0, 255, 234);
-    margin: 15px;
-    
- }
- ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f3e524;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
+  background-image: url(/TomyDeAnteojos.github.io/img/bici.jpg);
+  background-size: cover;
+  margin: 15px;
   
-  li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #acaba75d;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #aa048e;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/*esto es catalogo*/
+
+
+
+.box{
+  width: 75%;
+  height: 100%;
+  margin-left: 20%;
+  padding: 1px 16px;
+  padding: 20px;
+}
+
+
+table {
+table-layout: auto;
+  width: 90%;
+  height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e6e3f3;
   
-  li a.active {
-    background-color: #aa048e;
-    color: white;
-  }
   
-  li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-
-  /*esto es catalogo*/
-
-
-
-  .box{
-    width: 75%;
-    height: 100%;
-    background-color: brown;
-    margin-left: 20%;
-    padding: 1px 16px;
-    padding: 20px;
- }
- 
- 
- table {
-  table-layout: auto;
-    width: 90%;
-    height: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #e6e3f3;
-    
-    
 }
 th {
-  background-color: #7ac6da; 
-  border-radius: 10px 5px 10px 5px;
-  border: solid rgb(230, 206, 127);
-  border-radius: 5px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+background-color: #7ac6da; 
+border-radius: 10px 5px 10px 5px;
+border: solid rgb(230, 206, 127);
+border-radius: 5px;
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+border-radius: 10px;
 }
 th:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
 
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
 
-  .ul a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-   
-  .ul a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .ul a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
 
-  
+.ul a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.ul a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.ul a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
 /*esto es crear bici*/
-  
+
 .caja {
-  margin-left: 20%;
-  display: grid;
-  width: 75%;
-  border-radius: 5px;
-  background-color: pink;
-  padding: 30px;
+color: white;
+background-image: url(/TomyDeAnteojos.github.io/img/fondobici.jpg);
+background-size: contain;
+margin-left: 20%;
+display: grid;
+width: 75%;
+border-radius: 5px;
+padding: 30px;
 }
 
 label {
-  padding: 15px;
-  display: inline-block;
+padding: 15px;
+display: inline-block;
 }
 
 
 .p1 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-  background-color: #3d0ee9;
+color: white;
+float: left;
+width: 25%;
+margin-top: 6px;
+background-color: #43b6eb88;
 }
 
 .p2 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+float: left;
+width: 75%;
+margin-top: 6px;
 }
 
 input[type=text] {
-  background-color: green;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+background-color: green;
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
 }
 
 .boton{
-  width: 25%;
-  text-align: center;
-  margin-left: 35%;
+width: 25%;
+text-align: center;
+margin-left: 35%;
 }
 
 button[type=button] {
-  background-color: #3d0ee9;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+background-color: #3d0ee9;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
 }
 
 button[type=button]:hover {
-  background-color: #45a049;
+background-color: #43dee9c7;
 }
 
 .row::after {
-  content: "";
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
 
 
 /*esto es contacto*/
 .cn{
-background-color: #ffffff;
+background-color: #f3ecece5;
 width: 20%;
 margin-left: 37%;
 border-radius: 10px 10px 7px 7px;
 }
 .contac{
-background-color: #3d0ee9;
+background-image:url(/TomyDeAnteojos.github.io/img/fondod.jpg);
+background-size: cover;
+border-radius: 4px;
 width: 50%;
 display: flex;
 flex-direction: column;
@@ -185,29 +181,30 @@ display: flex;
 flex-direction: column;
 }
 .fila{
-background-color: #000;
+background-color: #00000023;
 gap: 30px;
 }
 .regla {
 float: left;
 width: 30%;
 margin: 6px;
-background-color: #0ebde9;
+color: white;
+background-color: #3973b683;
 }
 
 .regla2 {
-background-color: #ccc;
+color: white;
 float: left;
 width: 70%;
 margin: 6px;
 }
 
 .fila2{
-  background-color: #04AA6D;
- display: grid;
- justify-content: space-evenly;
- grid-template-rows: 30% 70%;
- gap: 20px;
+background-color: #1512c94d;
+display: grid;
+justify-content: space-evenly;
+grid-template-rows: 30% 70%;
+gap: 20px;
 }
 
 textarea{
@@ -219,12 +216,34 @@ height:150px;
 
 /*MEDIA QUERIES*/
 @media screen and (max-width:800px){
+body{
+    width: 100%;
+    background-color: #fd0a0a;
+    margin: 15px;
+}
+.box{
+    margin-left: 20%;
+    margin-right: 15px;
+}
+.caja{
+    width: 100%;
+    font-size: 20px;
+}
+.contenedor{
+  width: 100%;
+  gap: 15px;
+  padding: 10px;
+}
+
+}
+
+@media screen and (max-width:650px){
   body{
       width: 100%;
-      background-color: #fd0a0a;
+      background-color: #04AA6D;
       margin: 15px;
   }
-  .box{
+  .cj{
       margin-left: 20%;
       margin-right: 15px;
   }
@@ -232,100 +251,78 @@ height:150px;
       width: 100%;
       font-size: 20px;
   }
-  .contenedor{
-    width: 100%;
-    gap: 15px;
-    padding: 10px;
-  }
- 
-}
-
-  @media screen and (max-width:650px){
-    body{
-        width: 100%;
-        background-color: #04AA6D;
-        margin: 15px;
-    }
-    .cj{
-        margin-left: 20%;
-        margin-right: 15px;
-    }
-    .caja{
-        width: 100%;
-        font-size: 20px;
-    }
 }
 
 @media screen and (max-width: 550px) {
-    body{
-        width: 100%;
-        background-color: coral;
-        margin: 10px;
-    }
-    .cj {
-        width: 90%;
-        margin: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-   
-     ul {
+  body{
       width: 100%;
-      height: auto;
-      position: relative;
-      margin: auto;
-    }
-
-    ul a {float: left;}
-    .caja{
-        width: 100%;
-        margin-left: 0;
-        font-size: 15px;
-        padding: 15px;
-    }
-
-    .contenedor{
-      grid-template-columns: 1fr 1fr ;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      width: 100%;
-      margin-left: 0;
-      gap: 7px;
-      padding: 5px;
-    }
-    .box{
-      width: 95%;
-      padding: 5px;
-      margin-left: 0;
-  
-    }
-    
-    
-  }
-  
-  @media screen and (max-width: 400px) {
-    body{
-      background-color: #3d0ee9;
+      background-color: coral;
       margin: 10px;
+  }
+  .cj {
+      width: 90%;
+      margin: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+ 
+   ul {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+  }
 
-    }
-    ul a {
-      text-align: center;
-      float: none;
-    }
-    .caja{
+  ul a {float: left;}
+  .caja{
+      width: 100%;
+      margin-left: 0;
       font-size: 15px;
-      padding: 5px;
-    }
-    .p1{
-      width: 35%;
-    }
-    .p2{
-      width: 65%;
-    }
-    .contenedor{
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
+      padding: 15px;
+  }
 
+  .contenedor{
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin-left: 0;
+    gap: 7px;
+    padding: 5px;
+  }
+  .box{
+    width: 95%;
+    padding: 5px;
+    margin-left: 0;
 
   }
+  
+  
+}
+
+@media screen and (max-width: 400px) {
+  body{
+    background-color: #3d0ee9;
+    margin: 10px;
+
+  }
+  ul a {
+    text-align: center;
+    float: none;
+  }
+  .caja{
+    font-size: 15px;
+    padding: 5px;
+  }
+  .p1{
+    width: 35%;
+  }
+  .p2{
+    width: 65%;
+  }
+  .contenedor{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+
+}

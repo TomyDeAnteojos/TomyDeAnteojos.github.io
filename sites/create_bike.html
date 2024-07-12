@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Bicicleta</title>
     <link rel="stylesheet" href="../src/css/cande.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
 
 
     <ul>
-      <li><a class="active" href="/sites/create_bike.html">Crea tu bici</a></li>
-      <li><a href="/sites/create_bike.html">Catalogo</a></li>
-      <li><a href="/sites/my_designs.html">Mis creaciones</a></li>
-      <li><a href="/sites/contact.html">Contacto</a></li>
-    </ul>
+        <li><a class="active" href="#creatubici">Crea tu bici</a></li>
+        <li><a href="#catalogo">Catalogo</a></li>
+        <li><a href="#mis creaciones">Mis creaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
 
 
 
@@ -23,37 +23,45 @@
 -->
     <div class="caja">
         <h2>Crea tu Bici</h2>
-        <form id="create" enctype="multipart/form-data">
+        <form id="create">
         <div class="row">
           <div class="p1">
-            <label for="modelo">Modelo:</label>
+            <label for="name">Nombre:</label>
           </div>
           <div class="p2">
-            <input type="text" id="modelo" placeholder="modelo" required>
+            <input type="text" id="name" placeholder="Nombre" required>
           </div>
         </div>
         <div class="row">
           <div class="p1">
-            <label for="usuario">Usuario:</label>
+            <label for="precio">Precio:</label>
           </div>
           <div class="p2">
-            <input type="text" id="usuario" placeholder="Rango de usuario" required>
+            <input type="text" id="precio" placeholder="Rango de precio" required>
           </div>
         </div>
         <div class="row">
             <div class="p1">
-              <label for="precio">Precio:</label>
+              <label for="velocidades">Velocidades:</label>
             </div>
             <div class="p2">
-              <input type="text" id="precio" placeholder="Rango de precio" required>
+              <input type="text" id="velocidades" placeholder="Rango de velocidad" required>
             </div>
           </div>
         <div class="row">
             <div class="p1">
-              <label for="color">Color:</label>
+              <label for="rueda">Rodado:</label>
             </div>
             <div class="p2">
-              <input type="text" id="color" placeholder="color" required>
+              <input type="text" id="rueda" placeholder="rodados" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="p1">
+              <label for="imagen">Imagen:</label>
+            </div>
+            <div class="p2">
+              <input type="text" id="img" placeholder="imagen" required>
             </div>
           </div>
         <br>
