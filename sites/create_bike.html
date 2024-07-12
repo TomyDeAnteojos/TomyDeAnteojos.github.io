@@ -23,54 +23,54 @@
 -->
     <div class="caja">
         <h2>Crea tu Bici</h2>
-        <form>
+        <form id="create">
         <div class="row">
           <div class="p1">
-            <label for="name">Nombre</label>
+            <label for="name">Nombre:</label>
           </div>
           <div class="p2">
-            <input type="text" id="name" placeholder="Nombre">
+            <input type="text" id="name" placeholder="Nombre" required>
           </div>
         </div>
         <div class="row">
           <div class="p1">
-            <label for="precio">Precio</label>
+            <label for="precio">Precio:</label>
           </div>
           <div class="p2">
-            <input type="text" id="precio" placeholder="Rango de precio">
+            <input type="text" id="precio" placeholder="Rango de precio" required>
           </div>
         </div>
         <div class="row">
             <div class="p1">
-              <label for="velocidades">Velocidades</label>
+              <label for="velocidades">Velocidades:</label>
             </div>
             <div class="p2">
-              <input type="text" id="velocidades" placeholder="Rango de velocidad">
+              <input type="text" id="velocidades" placeholder="Rango de velocidad" required>
             </div>
           </div>
         <div class="row">
             <div class="p1">
-              <label for="rueda">Rodado</label>
+              <label for="rueda">Rodado:</label>
             </div>
             <div class="p2">
-              <input type="text" id="rueda" placeholder="rodados">
+              <input type="text" id="rueda" placeholder="rodados" required>
             </div>
           </div>
           <div class="row">
             <div class="p1">
-              <label for="imagen">Imagen</label>
+              <label for="imagen">Imagen:</label>
             </div>
             <div class="p2">
-              <input type="text" id="img" placeholder="imagen">
+              <input type="text" id="img" placeholder="imagen" required>
             </div>
           </div>
         <br>
         <div class="row">
-                <button type="submit" class="boton">Enviar</button>
+                <button type="button" class="boton" id="submitButton">Enviar</button>
             </div>
         </form>
       </div>
 
-
+<script src="../src/js/cande.js"></script>
 </body>
 </html>

@@ -32,53 +32,42 @@ body{
   }
 
   /*esto es catalogo*/
+
+
+
   .box{
+    width: 75%;
+    height: 100%;
     background-color: brown;
     margin-left: 20%;
     padding: 1px 16px;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
  }
- .card {
-    padding: 40%;
-    background-color: antiquewhite;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    position: relative;
+ 
+ 
+ table {
+  table-layout: auto;
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e6e3f3;
     
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .container {
-    padding: 2px 16px;
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  }
-  
-  .card:hover .overlay {
-    opacity: 1;
-  }
-  
+    
+}
+th {
+  background-color: #7ac6da; 
+  border-radius: 10px 5px 10px 5px;
+  border: solid rgb(230, 206, 127);
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+th:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
   .text {
     color: white;
     font-size: 20px;
@@ -154,7 +143,7 @@ input[type=text] {
   margin-left: 35%;
 }
 
-button[type=submit] {
+button[type=button] {
   background-color: #3d0ee9;
   color: white;
   padding: 12px 20px;
@@ -163,7 +152,7 @@ button[type=submit] {
   cursor: pointer;
 }
 
-button[type=submit]:hover {
+button[type=button]:hover {
   background-color: #45a049;
 }
 
@@ -171,52 +160,6 @@ button[type=submit]:hover {
   content: "";
   display: table;
   clear: both;
-}
-
-
-
-
-
-
-
-/*mis diseños*/
-.md{
-background-color: white;
-text-align: center;
-width: 20%;
-margin-left: 37%;
-border-radius: 10px 10px 7px 7px;
-}
-
-.contenedor {
-  background-color: brown;
-  margin-left: 20%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 30px;
-}
-
-.card-1{
- text-align: center;
-  background-color: antiquewhite;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-
-.card-1:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.cj {
-  text-align: center;
-  padding:20px 0;
-  font-size: 20px;
-}
-.img {
-  text-align: center;
- 
 }
 
 
@@ -258,8 +201,17 @@ float: left;
 width: 70%;
 margin: 6px;
 }
+
+.fila2{
+  background-color: #04AA6D;
+ display: grid;
+ justify-content: space-evenly;
+ grid-template-rows: 30% 70%;
+ gap: 20px;
+}
+
 textarea{
-width:120px; 
+width:350px; 
 height:150px;
 }
 
@@ -284,9 +236,8 @@ height:150px;
     width: 100%;
     gap: 15px;
     padding: 10px;
-    
-
   }
+ 
 }
 
   @media screen and (max-width:650px){
@@ -341,6 +292,13 @@ height:150px;
       gap: 7px;
       padding: 5px;
     }
+    .box{
+      width: 95%;
+      padding: 5px;
+      margin-left: 0;
+  
+    }
+    
     
   }
   
@@ -368,4 +326,6 @@ height:150px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
+
+
   }

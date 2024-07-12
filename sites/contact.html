@@ -20,24 +20,25 @@
 
 
 <!--ESTO ES CONTACTOS-->
+
       <div class="contac">
         <h2 class="cn">Contactate con nosotros</h2>
-        <form action="/action_page.php" autocomplete="on">
+        <form id="contacForm">
         <h3>12345678 987654321 654987321</h3>
     <div class="fila">
         <div class="regla">
-            <label for="fname">Nombre y Apellido:</label>
+            <label for="name">Nombre y Apellido:</label>
         </div>
             <div class="regla2">
-  <input type="text" id="nombre" >
+  <input type="text" id="name" name="name" required >
 </div>
 </div>
 <div class="fila">
         <div class="regla">
-            <label for="number">Telefono</label>
+            <label for="number">Telefono:</label>
         </div>
             <div class="regla2">
-  <input type="text" id="apellido">
+  <input type="text" id="number" name="number" required>
         </div>
     </div>
         <div class="fila">
@@ -45,21 +46,21 @@
             <label for="email">Email:</label>
             </div>
             <div class="regla2">
-            <input type="text" id="email">
+            <input type="text" id="email" name="email" required>
         </div>
     </div>
-        <div class="fila">
-        <div class="regla">
-            <textarea name="message">Escribir</textarea>
+        <div class="fila2">
+        <div class="regla3">
+            <textarea id="mensaje" name="mesaje" required></textarea>
   <br>
-  <div class="regla2">
-    <input type="submit">
+  <div class="regla4">
+    <button type="submit">Enviar</button>
   </div>
         </div>
     </div>
     </form>
       </div>
 
-
+      <script src="../src/js/cande.js"></script>
 </body>
 </html>
