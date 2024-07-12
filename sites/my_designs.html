@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Diseños</title>
-    <link rel="stylesheet" href="../src/css/cande2.css">
+    <link rel="stylesheet" href="../src/css/cande.css">
 </head>
 <body>
 
@@ -25,6 +25,7 @@
 <!--esto es mis diseños-->
 
   <h2 class="md">Mis Diseños</h2>
+  <!--
   <table  class="contenedor">
     <tbody>
 <tr>
@@ -74,7 +75,62 @@
 </th>
 </tr>
 </tbody>
+</table>-->
+<section  class="box">
+<table>
+    <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
+      <tr>
+        <th>ID</th>
+        <th>Modelo</th>
+        <th>Usuario</th>
+        <th>Precio</th>
+        <th>Color</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody id="tablaDisenios"> </tbody>
 </table>
 
+<script>
+    const URL = "http://127.0.0.1:5000/";
+
+    // Obtener el ID de usuario de la sesión
+    const userId = session.get('user_id');
+
+// Realizamos la solicitud GET al servidor para obtener todas las bicis del usuario
+fetch(URL + 'bicicletas/usuarios/' + userId)
+    .then(function(response) {
+        if (response.ok) {
+            // Si la respuesta es exitosa (response.ok), convierte el cuerpo de la respuesta de formato JSON a un objeto JavaScript y pasa estos datos a la siguiente promesa then.
+            return response.json(); 
+        } else {
+            // Si hubo un error, lanzar explícitamente una excepción para ser "catcheada" más adelante
+            throw new Error('Error al obtener las bicis.');
+        }
+    })
+    .then(function(data) {
+        let tablaDisenios = document.getElementById('tablaDisenios'); //Selecciona el elemento del DOM donde se mostrarán los productos.
+
+        // Iteramos sobre cada bici y agregamos filas a la tabla
+        for (let bici of data) {
+            let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada bici.
+            fila.innerHTML = '<td>' + bici.id + '</td>' +
+                '<td>' + bici.modelo + '</td>' +
+                '<td>' + bici.usuario + '</td>' +
+                '<td>' + bici.precio + '</td>' +
+                '<td>' + bici.color + '</td>' +
+                // Mostrar miniatura de la imagen (verificar que funciona)
+                '<td><img src="../img/bicicleta-dibujos-animados_60352-2945.avif" alt="azul" width="150" height="200"> </td>';
+
+            // Una vez que se crea la fila con el contenido de la bici, se agrega a la tabla utilizando el método appendChild del elemento tablaDisenios.
+            tablaDisenios.appendChild(fila);
+        }
+    })
+    .catch(function(error) {
+        // Captura y maneja errores, mostrando una alerta en caso de error al obtener las bicis.
+        alert('Error al obtener las bicis.');
+    });
+</script>
+</section>
 </body>
 </html>

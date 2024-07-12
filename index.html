@@ -6,14 +6,13 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/estilos.css">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Ag-WVWwOgCp3OdAWgNPhW8B44QDkZU29MApj8xkuUxlURM2H0dznGmb8vbRSQ4Ku32EHGctcrmToKDibJWpMM_buC5crNk1fxkElZGjvr-f_4zLvd8RlP2uvQSKOGGEO_7X-8IwnJxoalzkktM8U-sQThFPMPAfzxARX69OnLMMTUCQDP0MOtpfGOKra4YIrRXZ3WR8L8AYP57wzbP7AiowWxcv7APsI6m2AlY1SvcLMCyAg73zyin70LSAVQQ-_asMxRyPn9qfopQf5qqFFLA" charset="UTF-8"></script></head>
+</head>
 <body>
     <div class="container">
         <div class="logo-centrado">
             <img src="./static/imagenes/logo_Codo.jpg" alt="logo" class="img-fluid">
         </div>
         <h1 class="text-center my-4">Iniciar Sesión</h1>
-        
         <form id="loginForm">
             <div class="form-group">
                 <label for="username">Usuario:</label>
@@ -25,7 +24,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </form>
-        
         <p class="mt-3">¿No tienes una cuenta? <a href="register.html">Regístrate</a></p>
     </div>
 
@@ -46,7 +44,7 @@
             })
             .then(function (response) {
                 if (response.ok) {
-                    window.location.href = 'gestionar.html';
+                    window.location.href = '/sites/catalogue.html';  // Redirige al catálogo
                 } else {
                     throw new Error('Error al iniciar sesión.');
                 }
@@ -58,4 +56,3 @@
     </script>
 </body>
 </html>
-

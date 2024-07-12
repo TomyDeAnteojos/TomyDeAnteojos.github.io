@@ -1,13 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session, redirect, url_for
 from flask_cors import CORS
 import mysql.connector
-from werkzeug.utils import secure_filename
-import os
-import time
 
 app = Flask(__name__)
 CORS(app)
-
+app.secret_key = 'supersecretkey'  # Necesario para utilizar sesiones
+app.config['SESSION_TYPE'] = 'filesystem'
 class Bicicleta:
     bicis = []
 
@@ -33,8 +31,8 @@ class Bicicleta:
     # TRAE LAS BICIS DE UN USUARIO - MY_DESIGNS
     def selectBicisByUserId(self, id):
         sql = "SELECT b.id, b.modelo, u.nombre as usuario, b.precio, b.color FROM bdBicis.bicicletas b JOIN bdBicis.usuarios u ON b.usuario = u.id WHERE u.id = %s;"
-        self.cursor.execute(sql, id)
-        return self.cursor.fetchone()
+        self.cursor.execute(sql, (id,))
+        return self.cursor.fetchall()
 
     # MODIFICA UNA BICIS - MY_DESIGNS
     def updateBici(self, m, u, p, c, id):
@@ -68,7 +66,7 @@ class Usuario:
         self.cursor = self.conn.cursor(dictionary=True)
 
     def logear(self, n, p):
-        sql = "SELECT * FROM bdBicis.usuarios WHERE nombre LIKE %s AND pass LIKE %s;"
+        sql = "SELECT * FROM bdBicis.usuarios WHERE nombre = %s AND pass = %s;"
         self.cursor.execute(sql, (n, p))
         return self.cursor.fetchone()
 
@@ -131,14 +129,26 @@ def modificarBici(id):
 
 
 # -------------------------------- USUARIO -------------------------------- #
-user= Usuario()
- # Selecciona el usuario el cual se esta logeando - INDEX
-@app.route("/login/<usuario>/<contrasena>", methods=["POST"])
-def updateBici(usuario,contrasena):
-    if user.logear(usuario,contrasena):
-        return jsonify({"mensaje": "Usuario logeago"}), 200
+bicis = Bicicleta()
+
+# Ruta para el login
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.json
+    usuario = data.get('username')
+    contrasena = data.get('password')
+
+    user_instance = Usuario()
+    user_data = user_instance.logear(usuario, contrasena)
+    
+    if user_data:
+        session['usuario'] = user_data
+        session['user_id'] = user_data['id']
+        return jsonify({"mensaje": "Usuario logeado"}), 200
     else:
         return jsonify({"mensaje": "hubo un error al logear usuario"}), 403
+
+# Implementación de las rutas para Bicicletas...
 
 if __name__ == "__main__":
     app.run(debug=True)
