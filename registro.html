@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/css/estilos.css">
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Ag-WVWwOgCp3OdAWgNPhW8B44QDkZU29MApj8xkuUxlURM2H0dznGmb8vbRSQ4Ku32EHGctcrmToKDibJWpMM_buC5crNk1fxkElZGjvr-f_4zLvd8RlP2uvQSKOGGEO_7X-8IwnJxoalzkktM8U-sQThFPMPAfzxARX69OnLMMTUCQDP0MOtpfGOKra4YIrRXZ3WR8L8AYP57wzbP7AiowWxcv7APsI6m2AlY1SvcLMCyAg73zyin70LSAVQQ-_asMxRyPn9qfopQf5qqFFLA" charset="UTF-8"></script></head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rfqiNFtyeERMcGBVyoADZW9p6E29hVmbeEknDu8qdt-owhiOFqe5d5vPScoMdcSSwhsEE2-QlQWsfAzgIbMPA_Xs8h9y5NkmHKWFOo9WGDEWWD9QExOEiRNFRqk02GapXQT9-iNPbwK5Y6ppcupeAVakw2nP4xzuyqqqXjFGfNgTbD0ul6cLn3lBGZ6Vzx1Ede0Njy2vGRsxFu1eVmW_L0m-AHLJFCENIMPaD16p4qNkhY8cZkirl_T4fqbPw_CQZRAh-FncNC54cfkf8_OpvA" charset="UTF-8"></script></head>
 <body>
     <div class="container">
         <div class="logo-centrado">
             <img src="./static/imagenes/logo_Codo.jpg" alt="logo" class="img-fluid">
         </div>
-        <h1 class="text-center my-4">Iniciar Sesión</h1>
+        <h1 class="text-center my-4">Registrarse</h1>
         
-        <form id="loginForm">
+        <form id="registerForm">
             <div class="form-group">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" class="form-control" required>
@@ -23,39 +23,38 @@
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>
         
-        <p class="mt-3">¿No tienes una cuenta? <a href="register.html">Regístrate</a></p>
+        <p class="mt-3">¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a></p>
     </div>
 
     <script>
         const URL = "http://127.0.0.1:5000/";
 
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
             event.preventDefault();
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            fetch(URL + 'login', {
+            fetch(URL + 'register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ username: username, password: password })
+                body: JSON.stringify({ username: username, password: password, email: email })
             })
             .then(function (response) {
                 if (response.ok) {
                     window.location.href = 'gestionar.html';
                 } else {
-                    throw new Error('Error al iniciar sesión.');
+                    throw new Error('Error al registrarse.');
                 }
             })
             .catch(function (error) {
-                alert('Error al iniciar sesión.');
+                alert('Error al registrarse.');
             });
         });
     </script>
 </body>
 </html>
-

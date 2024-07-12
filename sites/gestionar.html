@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Bicicletas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-centrado"></div>
+        <h1 class="text-center my-4">Gestión de Bicicletas</h1>
+
+        <div id="contenido">
+            <div id="listado">
+                <button class="btn btn-success mb-3" id="agregar-btn">Agregar Bicicleta</button>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Modelo</th>
+                            <th>Usuario</th>
+                            <th>Precio</th>
+                            <th>Color</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBicicletas">
+                        <tr>
+                            <td>1</td>
+                            <td>Mountain Bike</td>
+                            <td>123</td>
+                            <td>1500.00</td>
+                            <td>Rojo</td>
+                            <td>
+                                <button class="btn btn-primary mr-2 modificar-btn" data-id="1" data-modelo="Mountain Bike" data-usuario="123" data-precio="1500.00" data-color="Rojo">Modificar</button>
+                                <button class="btn btn-danger" onclick="eliminarBicicleta(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="formularioBicicleta" style="display:none;">
+                <h2 id="formTitle">Agregar Bicicleta</h2>
+                <form id="formulario" enctype="multipart/form-data">
+                    <input type="hidden" id="bicicletaId" name="bicicletaId">
+                    <div class="form-group">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" step="0.01" id="precio" name="precio" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color:</label>
+                        <input type="text" id="color" name="color" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="formButton">Agregar Bicicleta</button>
+                    <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn btn-secondary">Menú principal</a>
+    </div>
+
+    <script>
+    const URL = "http://127.0.0.1:5000/";
+
+    // Obtiene la lista de bicicletas
+    function obtenerBicicletas() {
+        fetch(URL + 'bicicletas')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error al obtener las bicicletas.');
+                }
+            })
+            .then(function (data) {
+                let tablaBicicletas = document.getElementById('tablaBicicletas');
+                tablaBicicletas.innerHTML = '';
+                for (let bicicleta of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + bicicleta.id + '</td>' +
+                        '<td>' + bicicleta.modelo + '</td>' +
+                        '<td>' + bicicleta.usuario + '</td>' +
+                        '<td>' + bicicleta.precio + '</td>' +
+                        '<td>' + bicicleta.color + '</td>' +
+                        '<td>' +
+                            '<button class="btn btn-primary mr-2 modificar-btn" data-id="' + bicicleta.id + '" data-modelo="' + bicicleta.modelo + '" data-usuario="' + bicicleta.usuario + '" data-precio="' + bicicleta.precio + '" data-color="' + bicicleta.color + '">Modificar</button>' +
+                            '<button class="btn btn-danger" onclick="eliminarBicicleta(' + bicicleta.id + ')">Eliminar</button>' +
+                        '</td>';
+                    tablaBicicletas.appendChild(fila);
+                }
+
+                // Asigna eventos de clic a los botones de modificar después de generar las filas
+                let botonesModificar = document.querySelectorAll('.modificar-btn');
+                botonesModificar.forEach(function(boton) {
+                    boton.addEventListener('click', function() {
+                        mostrarFormulario(
+                            boton.getAttribute('data-id'),
+                            boton.getAttribute('data-modelo'),
+                            boton.getAttribute('data-usuario'),
+                            boton.getAttribute('data-precio'),
+                            boton.getAttribute('data-color')
+                        );
+                    });
+                });
+            })
+            .catch(function (error) {
+                alert('Error al obtener las bicicletas.');
+            });
+    }
+
+    // Muestra el formulario para agregar o modificar 
+    function mostrarFormulario(id, modelo, usuario, precio, color) {
+        document.getElementById('listado').style.display = 'none';
+        document.getElementById('formularioBicicleta').style.display = 'block';
+        if (id) {
+            // Si se pasa un ID, se configura el formulario para modificar
+            document.getElementById('formTitle').innerText = 'Modificar Bicicleta';
+            document.getElementById('formButton').innerText = 'Guardar Cambios';
+            document.getElementById('bicicletaId').value = id;
+            document.getElementById('modelo').value = modelo;
+            document.getElementById('usuario').value = usuario;
+            document.getElementById('precio').value = precio;
+            document.getElementById('color').value = color;
+        } else {
+            // Si no se pasa un ID, se configura el formulario para agregar
+            document.getElementById('formTitle').innerText = 'Agregar Bicicleta';
+            document.getElementById('formButton').innerText = 'Agregar Bicicleta';
+            document.getElementById('formulario').reset();
+        }
+    }
+
+    // Elimina una bicicleta por su ID
+    function eliminarBicicleta(id) {
+        if (confirm('¿Estás seguro de que quieres eliminar esta bicicleta?')) {
+            fetch(URL + 'bicicletas/eliminar/' + id, {
+                method: 'DELETE'
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    obtenerBicicletas();
+                    alert('Bicicleta eliminada correctamente.');
+                } else {
+                    throw new Error('Error al eliminar la bicicleta.');
+                }
+            })
+            .catch(function (error) {
+                alert('Error al eliminar la bicicleta.');
+            });
+        }
+    }
+
+    // Maneja el envío del formulario para agregar o modificar una bicicleta
+    document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var id = document.getElementById('bicicletaId').value;
+        var modelo = document.getElementById('modelo').value;
+        var usuario = document.getElementById('usuario').value;
+        var precio = document.getElementById('precio').value;
+        var color = document.getElementById('color').value;
+
+        var metodo = id ? 'PUT' : 'POST';
+        var url = id ? URL + 'bicicletas/modificar/' + id : URL + 'bicicletas/agregar';
+
+        fetch(url, {
+            method: metodo,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                modelo: modelo,
+                usuario: usuario,
+                precio: precio,
+                color: color
+            })
+        })
+        .then(function (response) {
+            if (response.ok) {
+                obtenerBicicletas();
+                alert(id ? 'Bicicleta modificada correctamente.' : 'Bicicleta agregada correctamente.');
+            } else {
+                throw new Error('Error al ' + (id ? 'modificar' : 'agregar') + ' la bicicleta.');
+            }
+        })
+        .catch(function (error) {
+            alert('Error al ' + (id ? 'modificar' : 'agregar') + ' la bicicleta.');
+        })
+        .finally(function () {
+            document.getElementById('listado').style.display = 'block';
+            document.getElementById('formularioBicicleta').style.display = 'none';
+        });
+    });
+
+    // Muestra el formulario de agregar bicicleta
+    document.getElementById('agregar-btn').addEventListener('click', function () {
+        mostrarFormulario();
+    });
+
+    // Cancela la operación y regresa al listado de bicicletas
+    document.getElementById('cancelarBtn').addEventListener('click', function () {
+        document.getElementById('listado').style.display = 'block';
+        document.getElementById('formularioBicicleta').style.display = 'none';
+    });
+
+    // Inicializa la lista de bicicletas al cargar la página
+    document.addEventListener('DOMContentLoaded', obtenerBicicletas);
+    </script>
+</body>
+</html>

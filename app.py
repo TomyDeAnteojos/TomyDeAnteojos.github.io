@@ -44,14 +44,18 @@ class Bicicleta:
         return self.cursor.rowcount > 0
 
     # AGREGA UNA BICICLETA A LA BASE DE DATOS - CREATE_BIKE
+# AGREGA UNA BICICLETA A LA BASE DE DATOS - CREATE_BIKE
     def insertBici(self, m, u, p, c):
         sql = "INSERT INTO bdBicis.bicicletas (modelo, usuario, precio, color) VALUES (%s, %s, %s, %s);"
         self.cursor.execute(sql, (m, u, p, c))
         self.conn.commit()
         return self.cursor.rowcount > 0
     
-    def showBike(self):
-        return self.id, self.modelo, self.usuario, self.precio, self.color
+    # BORRA UNA BICICLETA DE LA BASE DE DATOS - MY_DESIGNS
+    def deleteBici(self, id):
+        self.cursor.execute(f"DELETE FROM bdBicis.bicicletas WHERE id = {id}")
+        self.conn.commit()
+        return self.cursor.rowcount > 0
 
 class Usuario:
     usuarios = []
@@ -67,26 +71,70 @@ class Usuario:
         sql = "SELECT * FROM bdBicis.usuarios WHERE nombre LIKE %s AND pass LIKE %s;"
         self.cursor.execute(sql, (n, p))
         return self.cursor.fetchone()
-    
-bicis = Bicicleta()
 
-@app.route("/sites/catalogue", methods=["GET"])
+
+# -------------------------------- BICICLETAS -------------------------------- #
+bicis = Bicicleta()
+ # Selecciona todas las bicis - CATALOGUE
+@app.route("/bicicletas", methods=["GET"])
 def showAllBicis():
     b = bicis.selectAllBicis()
     return jsonify(b)
 
-@app.route("/sites/my_designs/<int:id>", methods=["GET"])
+ # Selecciona todas las bicis - MY_DESIGNS
+@app.route("/bicicletas/usuarios/<int:id>", methods=["GET"])
 def showBicis(id):
     b = bicis.selectBicisByUserId(id)
     return jsonify(b)
 
-@app.route("/sites/create_bike/", methods=["POST"])
+# Inserta una bici creada por un usuario - CREATE_BIKE
+@app.route("/bicicletas/agregar", methods=["POST"])
 def insertBici():
-    descripcion = request.form['descripcion']
-    cantidad = request.form['cantidad']
-    precio = request.form['precio']
-    imagen = request.files['imagen']
-    proveedor = request.form['proveedor'] 
+    data = request.get_json() or request.form
+    modelo = data['modelo']
+    usuario = data['usuario']
+    precio = data['precio']
+    color = data['color']
+    if bicis.insertBici(modelo, usuario, precio, color):
+        return jsonify({"mensaje": "Bici agregada"}), 201
+    else:
+        return jsonify({"mensaje": "Error al agregar la bici"}), 500
+
+
+ # Eliminar una bici de un usuario en especifico - MY_DESIGNS
+@app.route("/bicicletas/eliminar/<int:id>", methods=["DELETE"])
+def delete(id):
+    b = bicis.deleteBici(id)
+    if b:
+        return jsonify({"mensaje": "Bici eliminada"}), 200
+    else:
+        return jsonify({"mensaje": "Error al eliminar la bici"}), 500
+
+ # Modifica una bici de un usuario en especifico - MY_DESIGNS
+@app.route("/bicicletas/modificar/<int:id>", methods=["PUT"])
+def modificarBici(id):
+    data = request.json
+
+    modelo = data.get('modelo')
+    usuario = data.get('usuario')
+    precio = data.get('precio')
+    color = data.get('color')
+
+    if bicis.updateBici(modelo, usuario, precio, color, id):
+        return jsonify({"mensaje": "Bici modificada"}), 200
+    else:
+        return jsonify({"mensaje": "hubo un error al modificar la bici"}), 403
+
+
+# -------------------------------- USUARIO -------------------------------- #
+user= Usuario()
+ # Selecciona el usuario el cual se esta logeando - INDEX
+@app.route("/login/<usuario>/<contrasena>", methods=["POST"])
+def updateBici(usuario,contrasena):
+    if user.logear(usuario,contrasena):
+        return jsonify({"mensaje": "Usuario logeago"}), 200
+    else:
+        return jsonify({"mensaje": "hubo un error al logear usuario"}), 403
 
 if __name__ == "__main__":
     app.run(debug=True)
