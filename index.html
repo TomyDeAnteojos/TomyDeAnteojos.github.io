@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
 <body>
     <div class="container">
         <div class="logo-centrado">
-            <img src="./static/imagenes/logo_Codo.jpg" alt="logo" class="img-fluid">
+            <img src="./img/logo.png" with="150" height="150" alt="logo" >
         </div>
         <h1 class="text-center my-4">Iniciar Sesión</h1>
         <form id="loginForm">
@@ -44,7 +43,7 @@
             })
             .then(function (response) {
                 if (response.ok) {
-                    window.location.href = '/sites/catalogue.html';  // Redirige al catálogo
+                    window.location.href = '/sites/my_designs.html';  // Redirige al catálogo
                 } else {
                     throw new Error('Error al iniciar sesión.');
                 }

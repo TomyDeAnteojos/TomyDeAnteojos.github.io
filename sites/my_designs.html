@@ -8,77 +8,19 @@
 </head>
 <body>
 
-
-
-
 <ul>
     <li><a class="active" href="./create_bike.html">Crea tu bici</a></li>
     <li><a href="./catalogue.html">Catalogo</a></li>
     <li><a href="./my_designs.html">Mis creaciones</a></li>
     <li><a href="./contact.html">Contacto</a></li>
   </ul>
-
-
-
-
-
 <!--esto es mis diseños-->
 
   <h2 class="md">Mis Diseños</h2>
-  <!--
-  <table  class="contenedor">
-    <tbody>
-<tr>
-    <th class="card-1" id="diseño1" scope="col">
-        <img src="../img/bicicleta-dibujos-animados_60352-2945.avif" alt="img" width="150" height="200">
-        <div class="cj">
-            <b id="numero"> numero </b>
-            <p id="fecha"> fecha </p>
-        </div>
-    </th>
-<th class="card-1" scope="col">
-    <img src="../img/amarilla.jpg" alt="img" width="150" height="200">
-    <div class="cj">
-        <b>numero </b>
-        <p>creada el 1/7/8</p>
-    </div>
-</th>
-<th class="card-1" scope="col">
-    <img src="../img/verde.jpg" alt="img" width="150" height="200">
-    <div class="cj">
-        <b>bici 6</b>
-        <p>creada el 1/7/8</p>
-    </div>
-</th>
-</tr>
-<tr>
-<th class="card-1" scope="col">
-    <img src="../img/rojo.jpg" alt="img" width="150" height="200">
-    <div class="cj">
-        <b>bici 6</b>
-        <p>creada el 1/7/8</p>
-    </div>
-</th>
-<th class="card-1" scope="col">
-    <img src="../img/rosa.jpg" alt="img" width="150" height="200">
-    <div class="cj">
-        <b>bici 6</b>
-        <p>creada el 1/7/8</p>
-    </div>
-</th>
-<th class="card-1" scope="col">
-    <img src="../img/celeste.jpg" alt="img" width="150" height="200">
-    <div class="cj">
-        <b>bici 6</b>
-        <p>creada el 1/7/8</p>
-    </div>
-</th>
-</tr>
-</tbody>
-</table>-->
+
 <section  class="box">
 <table>
-    <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
+    <thead>
       <tr>
         <th>ID</th>
         <th>Modelo</th>
@@ -93,41 +35,30 @@
 
 <script>
     const URL = "http://127.0.0.1:5000/";
-
-    // Obtener el ID de usuario de la sesión
-    const userId = session.get('user_id');
-
-// Realizamos la solicitud GET al servidor para obtener todas las bicis del usuario
-fetch(URL + 'bicicletas/usuarios/' + userId)
+        
+fetch(URL + 'bicicletas/usuarios/5' )
     .then(function(response) {
         if (response.ok) {
-            // Si la respuesta es exitosa (response.ok), convierte el cuerpo de la respuesta de formato JSON a un objeto JavaScript y pasa estos datos a la siguiente promesa then.
+            print("entro OK")
             return response.json(); 
         } else {
-            // Si hubo un error, lanzar explícitamente una excepción para ser "catcheada" más adelante
             throw new Error('Error al obtener las bicis.');
         }
     })
     .then(function(data) {
-        let tablaDisenios = document.getElementById('tablaDisenios'); //Selecciona el elemento del DOM donde se mostrarán los productos.
-
-        // Iteramos sobre cada bici y agregamos filas a la tabla
+        let tablaDisenios = document.getElementById('tablaDisenios'); 
         for (let bici of data) {
-            let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada bici.
+            let fila = document.createElement('tr'); 
             fila.innerHTML = '<td>' + bici.id + '</td>' +
                 '<td>' + bici.modelo + '</td>' +
                 '<td>' + bici.usuario + '</td>' +
                 '<td>' + bici.precio + '</td>' +
                 '<td>' + bici.color + '</td>' +
-                // Mostrar miniatura de la imagen (verificar que funciona)
                 '<td><img src="../img/bicicleta-dibujos-animados_60352-2945.avif" alt="azul" width="150" height="200"> </td>';
-
-            // Una vez que se crea la fila con el contenido de la bici, se agrega a la tabla utilizando el método appendChild del elemento tablaDisenios.
             tablaDisenios.appendChild(fila);
         }
     })
     .catch(function(error) {
-        // Captura y maneja errores, mostrando una alerta en caso de error al obtener las bicis.
         alert('Error al obtener las bicis.');
     });
 </script>

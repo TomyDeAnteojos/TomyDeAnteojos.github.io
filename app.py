@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, session, redirect, url_for
-from flask_cors import CORS
 import mysql.connector
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
@@ -144,6 +144,8 @@ def login():
     if user_data:
         session['usuario'] = user_data
         session['user_id'] = user_data['id']
+
+       # print(session['user_id'])
         return jsonify({"mensaje": "Usuario logeado"}), 200
     else:
         return jsonify({"mensaje": "hubo un error al logear usuario"}), 403

@@ -1,6 +1,6 @@
 
 body{
-  background-image: url(/TomyDeAnteojos.github.io/img/bici.jpg);
+  background-image: url(/img/bici.jpg);
   background-size: cover;
   margin: 15px;
   
@@ -93,7 +93,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 .caja {
 color: white;
-background-image: url(/TomyDeAnteojos.github.io/img/fondobici.jpg);
+background-image: url(/img/fondobici.jpg);
 background-size: contain;
 margin-left: 20%;
 display: grid;
@@ -137,7 +137,7 @@ text-align: center;
 margin-left: 35%;
 }
 
-button[type=button] {
+button[type=submit] {
 background-color: #3d0ee9;
 color: white;
 padding: 12px 20px;
@@ -146,7 +146,7 @@ border-radius: 4px;
 cursor: pointer;
 }
 
-button[type=button]:hover {
+button[type=submit]:hover {
 background-color: #43dee9c7;
 }
 
@@ -165,7 +165,7 @@ margin-left: 37%;
 border-radius: 10px 10px 7px 7px;
 }
 .contac{
-background-image:url(/TomyDeAnteojos.github.io/img/fondod.jpg);
+background-image:url(/img/fondod.jpg);
 background-size: cover;
 border-radius: 4px;
 width: 50%;
